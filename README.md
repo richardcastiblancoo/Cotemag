@@ -56,7 +56,7 @@ Este es un sistema web desarrollado en HTML, CSS, JAVASCRIPT, PHP, MYSQL, que pe
 ## 📦 Instalación
 1. Clona el repositorio:
    ```bash
-     https://github.com/richardcastiblancoo/cotemag.git
+     https://github.com/richardcastiblancoo/Cotemag.git
    ```
 
 

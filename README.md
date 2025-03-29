@@ -12,8 +12,6 @@ Este es un sistema web desarrollado en HTML, CSS, JAVASCRIPT, PHP, MYSQL, que pe
 - **PHP** (Backend y API)
 - **CSS** (Estilos personalizados)
 - **JavaScript** (Interactividad adicional)
-- **sweetalert2** (alertas animadas)
-- **tailwindcss** (freamework css)
 
 ## 📌 Funcionalidades
 ### 🔹 Administrador

@@ -8,10 +8,10 @@ Este es un sistema web desarrollado en HTML, CSS, JAVASCRIPT, PHP, MYSQL, que pe
 
 ## 🚀 Tecnologías Utilizadas
 - **html** (principal)
-- **mySQL** (Gestión de datos)
-- **PHP** (Backend y API)
 - **CSS** (Estilos personalizados)
 - **JavaScript** (Interactividad adicional)
+- **PHP** (Backend y API)
+- **mySQL** (Gestión de datos)
 
 ## 📌 Funcionalidades
 ### 🔹 Administrador

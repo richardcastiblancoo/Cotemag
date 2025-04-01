@@ -15,8 +15,10 @@
 
 <!-- Footer -->
 
+
+
 <?php include 'includes/administrador.php'; ?>
-<?php include 'includes/login.php'; ?>
+
  
 <!-- --------------- -->
 

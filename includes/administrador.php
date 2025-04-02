@@ -1,5 +1,5 @@
 <a href="">Administrador</a>
-<a href="/pages/oferta_academica.php" class="btn2">Programas ofertados</a>
+<a href="../cotemag/pages/oferta_academica.php" class="btn2">Programas ofertados</a>
 
 <style>
         .btn2{

@@ -1,4 +1,4 @@
-<a href="">Administrador</a>
+<a href="login.php">Administrador</a>
 
 <style>
     a{

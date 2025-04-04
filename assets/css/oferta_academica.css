@@ -5,6 +5,9 @@
   gap: 20px;
   align-items: stretch;
 }
+a{
+  text-decoration: none;
+}
 
 /* aqui se modifica las tarjetas para que tengan la misma altura  */
 .program-card {

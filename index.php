@@ -10,18 +10,22 @@ $resultado = mysqli_query($conexion, $query);
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cotemag - Noticias</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Cotemag - Bienvenidos a la Corporación Técnica del Magdalena</title>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.php">Cotemag</a>
             <div class="navbar-nav ml-auto">
-                <?php if(isset($_SESSION['user_id'])): ?>
+                <?php if (isset($_SESSION['user_id'])): ?>
                     <a href="dashboard.php" class="btn btn-outline-light mr-2">Dashboard</a>
                     <a href="logout.php" class="btn btn-outline-light">Cerrar Sesión</a>
                 <?php else: ?>
@@ -32,12 +36,20 @@ $resultado = mysqli_query($conexion, $query);
         </div>
     </nav>
 
+
+    <!-- Contenido de las noticias -->
+    <div class="container-text">
+        <div class="container">
+            <h3 class="h3">Blog</h3>
+            <h2 class="h2">Entérate de nuestras actividades</h2>
+        </div>
+    </div>
     <div class="container mt-4">
         <div class="row">
-            <?php while($post = mysqli_fetch_assoc($resultado)): ?>
+            <?php while ($post = mysqli_fetch_assoc($resultado)): ?>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        <?php if($post['imagen']): ?>
+                        <?php if ($post['imagen']): ?>
                             <img src="<?php echo $post['imagen']; ?>" class="card-img-top" alt="<?php echo $post['titulo']; ?>">
                         <?php endif; ?>
                         <div class="card-body">
@@ -54,7 +66,7 @@ $resultado = mysqli_query($conexion, $query);
         </div>
     </div>
 
-    <?php include 'includes/administrador.php'; ?>
 
 </body>
+
 </html>

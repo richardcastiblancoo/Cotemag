@@ -44,12 +44,12 @@ if (isset($_POST['publicar'])) {
         if (in_array($file_ext, $allowed)) {
             $imagen_nombre = time() . '_' . $filename;
             $destino = "uploads/" . $imagen_nombre;
-            
+
             // Create uploads directory if it doesn't exist
             if (!file_exists('uploads')) {
                 mkdir('uploads', 0777, true);
             }
-            
+
             if (move_uploaded_file($_FILES['imagen']['tmp_name'], $destino)) {
                 $imagen = $destino;
             }
@@ -128,7 +128,7 @@ $resultado = mysqli_query($conexion, $query);
                                         <small><i class="fas fa-calendar-alt"></i> <?php echo date('d M Y', strtotime($post['fecha_publicacion'])); ?></small>
                                     </p>
                                     <p class="card-text"><?php echo substr($post['contenido'], 0, 200) . '...'; ?></p>
-                                    
+
                                     <div class="d-flex justify-content-end mt-3">
                                         <button class="btn btn-outline-primary btn-sm mr-2" data-toggle="modal" data-target="#editModal<?php echo $post['id']; ?>">
                                             <i class="fas fa-edit"></i> Editar

@@ -29,19 +29,17 @@ $resultado = mysqli_query($conexion, $query);
                     <a href="dashboard.php" class="btn btn-outline-light mr-2">Dashboard</a>
                     <a href="logout.php" class="btn btn-outline-light">Cerrar Sesión</a>
                 <?php else: ?>
-                    <a href="login.php" class="btn btn-outline-light mr-2">Iniciar Sesión</a>
-                    <a href="registro.php" class="btn btn-outline-light">Registrarse</a>
+                    <a href="login.php" class="btn btn-outline-light mr-2">Administrador Blog</a>
+                    <a href="https://site4.q10.com/login?ReturnUrl=%2F&aplentId=73c46535-d1df-4c30-8340-44c2a135aae5" class="btn btn-outline-light">Plataforma Q10</a>
                 <?php endif; ?>
             </div>
         </div>
     </nav>
 
-
     <!-- Contenido de las noticias -->
     <div class="container-text">
         <div class="container">
-            <h3 class="h3">Blog</h3>
-            <h2 class="h2">Entérate de nuestras actividades</h2>
+            <h2 class="h2">Blog Entérate de nuestras actividades</h2>
         </div>
     </div>
     <div class="container mt-4">

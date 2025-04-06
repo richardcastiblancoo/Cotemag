@@ -16,14 +16,15 @@ $resultado = mysqli_query($conexion, $query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <link rel="icon" href="logo5.png" type="image/png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Cotemag - Bienvenidos a la Corporación Técnica del Magdalena</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.php">Cotemag</a>
+            <img src="logo5.png" class="logo" alt="">
             <div class="navbar-nav ml-auto">
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <a href="dashboard.php" class="btn btn-outline-light mr-2">Dashboard</a>
@@ -45,7 +46,7 @@ $resultado = mysqli_query($conexion, $query);
     <div class="container mt-4">
         <div class="row">
             <?php while ($post = mysqli_fetch_assoc($resultado)): ?>
-                <div class="col-md-6 mb-4">
+                <div class="col-md-4 mb-4">
                     <div class="card">
                         <?php if ($post['imagen']): ?>
                             <img src="<?php echo $post['imagen']; ?>" class="card-img-top" alt="<?php echo $post['titulo']; ?>">
@@ -53,10 +54,38 @@ $resultado = mysqli_query($conexion, $query);
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $post['titulo']; ?></h5>
                             <p class="card-text"><?php echo substr($post['contenido'], 0, 200) . '...'; ?></p>
-                            <p class="text-muted">
+                            <button type="button" class="btn btn-primary btn-sm btn-read-more" data-toggle="modal" data-target="#modal<?php echo $post['id']; ?>">
+                                Leer más
+                            </button>
+                            <p class="text-muted mt-2">
                                 Por: <?php echo $post['username']; ?><br>
                                 Publicado el: <?php echo $post['fecha_publicacion']; ?>
                             </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal for each post -->
+                <div class="modal fade" id="modal<?php echo $post['id']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title"><?php echo $post['titulo']; ?></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <?php if ($post['imagen']): ?>
+                                    <img src="<?php echo $post['imagen']; ?>" class="img-fluid mb-3" alt="<?php echo $post['titulo']; ?>">
+                                <?php endif; ?>
+                                <?php echo $post['contenido']; ?>
+                                <hr>
+                                <p class="text-muted">
+                                    Por: <?php echo $post['username']; ?><br>
+                                    Publicado el: <?php echo $post['fecha_publicacion']; ?>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -64,7 +93,10 @@ $resultado = mysqli_query($conexion, $query);
         </div>
     </div>
 
-
+    <!-- Add Bootstrap JS and dependencies at the end of body -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

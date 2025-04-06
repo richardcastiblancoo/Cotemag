@@ -73,14 +73,19 @@ $resultado = mysqli_query($conexion, $query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Cotemag</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/dashboard.css">
+    <link rel="icon" href="logo5.png" type="image/png">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.php">Cotemag</a>
-            <div class="navbar-nav ml-auto">
-                <span class="navbar-text mr-3">Bienvenido, <?php echo $_SESSION['username']; ?></span>
+            <div class="navbar-nav ml-auto d-flex flex-row align-items-center">
+                <div class="mr-3 search-container">
+                    <input type="text" id="searchPost" class="form-control" placeholder="Buscar por título, contenido o fecha...">
+                </div>
+                <span class="navbar-text mr-3">Bienvenido, <?php echo htmlspecialchars($_SESSION['username']); ?></span>
                 <a href="logout.php" class="btn btn-outline-light">Cerrar Sesión</a>
             </div>
         </div>
@@ -117,82 +122,84 @@ $resultado = mysqli_query($conexion, $query);
                         <h3 class="mb-0">Mis Publicaciones</h3>
                     </div>
                     <div class="card-body p-0">
-                        <?php while ($post = mysqli_fetch_assoc($resultado)): ?>
-                            <div class="card shadow-sm mb-3 mx-3 mt-3">
-                                <?php if (!empty($post['imagen'])): ?>
-                                    <img src="<?php echo $post['imagen']; ?>" class="card-img-top" alt="Post image" style="height: 200px; object-fit: cover;">
-                                <?php endif; ?>
-                                <div class="card-body">
-                                    <h4 class="card-title text-primary"><?php echo $post['titulo']; ?></h4>
-                                    <p class="card-text text-muted mb-2">
-                                        <small><i class="fas fa-calendar-alt"></i> <?php echo date('d M Y', strtotime($post['fecha_publicacion'])); ?></small>
-                                    </p>
-                                    <p class="card-text"><?php echo substr($post['contenido'], 0, 200) . '...'; ?></p>
+                        <div id="posts-container">
+                            <?php while ($post = mysqli_fetch_assoc($resultado)): ?>
+                                <div class="card shadow-sm mb-3 mx-3 mt-3 post-item">
+                                    <?php if (!empty($post['imagen'])): ?>
+                                        <img src="<?php echo $post['imagen']; ?>" class="card-img-top" alt="Post image" style="height: 200px; object-fit: cover;">
+                                    <?php endif; ?>
+                                    <div class="card-body">
+                                        <h4 class="card-title text-primary"><?php echo $post['titulo']; ?></h4>
+                                        <p class="card-text text-muted mb-2">
+                                            <small><i class="fas fa-calendar-alt"></i> <?php echo date('d M Y', strtotime($post['fecha_publicacion'])); ?></small>
+                                        </p>
+                                        <p class="card-text"><?php echo substr($post['contenido'], 0, 200) . '...'; ?></p>
 
-                                    <div class="d-flex justify-content-end mt-3">
-                                        <button class="btn btn-outline-primary btn-sm mr-2" data-toggle="modal" data-target="#editModal<?php echo $post['id']; ?>">
-                                            <i class="fas fa-edit"></i> Editar
-                                        </button>
-                                        <form method="POST" action="" style="display: inline;">
-                                            <input type="hidden" name="post_id" value="<?php echo $post['id']; ?>">
-                                            <button type="submit" name="eliminar" class="btn btn-outline-danger btn-sm"
-                                                onclick="return confirm('¿Estás seguro de eliminar esta publicación?')">
-                                                <i class="fas fa-trash-alt"></i> Eliminar
+                                        <div class="d-flex justify-content-end mt-3">
+                                            <button class="btn btn-outline-primary btn-sm mr-2" data-toggle="modal" data-target="#editModal<?php echo $post['id']; ?>">
+                                                <i class="fas fa-edit"></i> Editar
                                             </button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Edit Modal -->
-                            <div class="modal fade" id="editModal<?php echo $post['id']; ?>" tabindex="-1">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Editar Publicación</h5>
-                                            <button type="button" class="close" data-dismiss="modal">
-                                                <span>&times;</span>
-                                            </button>
-                                        </div>
-                                        // In the edit form modal, add image upload capability
-                                        <div class="modal-body">
-                                            <form method="POST" action="" enctype="multipart/form-data">
+                                            <form method="POST" action="" style="display: inline;">
                                                 <input type="hidden" name="post_id" value="<?php echo $post['id']; ?>">
-                                                <div class="form-group">
-                                                    <label>Título</label>
-                                                    <input type="text" name="titulo" class="form-control" value="<?php echo $post['titulo']; ?>" required>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Contenido</label>
-                                                    <textarea name="contenido" class="form-control" rows="5" required><?php echo $post['contenido']; ?></textarea>
-                                                </div>
-                                                <?php if (!empty($post['imagen'])): ?>
-                                                    <div class="form-group">
-                                                        <label>Imagen actual:</label>
-                                                        <img src="<?php echo $post['imagen']; ?>" class="img-fluid mb-2" style="max-height: 200px;">
-                                                    </div>
-                                                <?php endif; ?>
-                                                <div class="form-group">
-                                                    <label>Nueva imagen (opcional)</label>
-                                                    <input type="file" name="imagen" class="form-control-file">
-                                                </div>
-                                                <button type="submit" name="editar" class="btn btn-primary">Guardar Cambios</button>
+                                                <button type="submit" name="eliminar" class="btn btn-outline-danger btn-sm"
+                                                    onclick="return confirm('¿Estás seguro de eliminar esta publicación?')">
+                                                    <i class="fas fa-trash-alt"></i> Eliminar
+                                                </button>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        <?php endwhile; ?>
+                                <!-- Edit Modal -->
+                                <div class="modal fade" id="editModal<?php echo $post['id']; ?>" tabindex="-1">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Editar Publicación</h5>
+                                                <button type="button" class="close" data-dismiss="modal">
+                                                    <span>&times;</span>
+                                                </button>
+                                            </div>
+                                            // In the edit form modal, add image upload capability
+                                            <div class="modal-body">
+                                                <form method="POST" action="" enctype="multipart/form-data">
+                                                    <input type="hidden" name="post_id" value="<?php echo $post['id']; ?>">
+                                                    <div class="form-group">
+                                                        <label>Título</label>
+                                                        <input type="text" name="titulo" class="form-control" value="<?php echo $post['titulo']; ?>" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Contenido</label>
+                                                        <textarea name="contenido" class="form-control" rows="5" required><?php echo $post['contenido']; ?></textarea>
+                                                    </div>
+                                                    <?php if (!empty($post['imagen'])): ?>
+                                                        <div class="form-group">
+                                                            <label>Imagen actual:</label>
+                                                            <img src="<?php echo $post['imagen']; ?>" class="img-fluid mb-2" style="max-height: 200px;">
+                                                        </div>
+                                                    <?php endif; ?>
+                                                    <div class="form-group">
+                                                        <label>Nueva imagen (opcional)</label>
+                                                        <input type="file" name="imagen" class="form-control-file">
+                                                    </div>
+                                                    <button type="submit" name="editar" class="btn btn-primary">Guardar Cambios</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Add Font Awesome for icons -->
-    <script src="https://kit.fontawesome.com/your-code-here.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Update the scripts section at the bottom -->
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="main.js"></script>
 </body>
 
 </html>

@@ -1,15 +1,181 @@
-/* Tarjetas de cada programa */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables de colores basadas en el logo */
+:root {
+  --primary: #003366; /* Azul marino del logo */
+  --primary-light: #004488; /* Versión más clara para hover */
+  --secondary: #d4af37; /* Dorado del logo */
+  --secondary-light: #e6c65c; /* Dorado más claro para hover */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-light: #888888;
+  --background: #f8f9fa;
+  --background-alt: #f0f7ff;
+  --border: #dddddd;
+  --overlay: rgba(0, 0, 0, 0.7);
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--background);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Sección Hero */
+.hero {
+  text-align: center;
+  padding: 60px 0 40px;
+  background-color: var(--primary);
+  color: white;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-light);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background-color: rgba(0, 51, 102, 0.1);
+}
+
+.btn-lg {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* Pestañas */
+.tabs {
+  margin-bottom: 40px;
+}
+
+.tab-list {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.tab-button:hover {
+  color: var(--primary);
+}
+
+.tab-button.active {
+  color: var(--primary);
+  border-bottom-color: var(--secondary);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Tarjetas de programa */
 .program-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   align-items: stretch;
 }
-a{
-  text-decoration: none;
-}
 
-/* aqui se modifica las tarjetas para que tengan la misma altura  */
+/* Modificar la clase program-card para asegurar que todas las tarjetas tengan la misma altura */
 .program-card {
   background-color: #fff;
   border-radius: 8px;
@@ -32,7 +198,7 @@ a{
   border-color: var(--secondary);
 }
 
-/*manejar imágenes cuadradas */
+/* Modificar la clase program-image para manejar imágenes cuadradas */
 .program-image {
   position: relative;
   width: 100%;
@@ -47,6 +213,20 @@ a{
   width: 100%;
   height: 100%;
   object-fit: cover; /* Esto asegura que la imagen cubra el área sin distorsionarse */
-  object-position: center;
+  object-position: center; /* Centra la imagen */
   transition: transform 0.3s ease;
+}
+
+.program-card:hover .program-image img {
+  transform: scale(1.05); /* Efecto de zoom suave al pasar el cursor */
+}
+
+.program-header {
+  padding: 12px 12px 4px;
+}
+
+.program-header h3 {
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+  color: var(--primary);
 }

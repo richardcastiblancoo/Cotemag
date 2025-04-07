@@ -4015,11 +4015,10 @@
       // También cerrar modales con la tecla Escape
       document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
-          window.location.href = '';
+          window.location.href = 'health';
         }
       });
     });
   </script>
 </body>
-
 </html>

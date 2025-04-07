@@ -22,6 +22,8 @@ $resultado = mysqli_query($conexion, $query);
 </head>
 
 <body>
+<?php include '../cotemag/includes/header.php'; ?>
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <img src="logo5.png" class="logo" alt="">

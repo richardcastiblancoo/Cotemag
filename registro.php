@@ -23,7 +23,8 @@ if(isset($_POST['register'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro - Cotemag</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="icon" href="logo5.png" type="image/png">
+    <link rel="stylesheet" href="/Cotemag/assets/css/login.css">
+    <link rel="icon" href="/Cotemag/assets/img/logo5.png" type="image/png">
 </head>
 <body>
     <div class="container mt-5">
@@ -33,7 +34,13 @@ if(isset($_POST['register'])) {
                     <div class="card-header">
                         <h3 class="text-center">Registro</h3>
                     </div>
+                    <div class="text-center mt-4 mb-3">
+                        <img src="/Cotemag/assets/img/logo5.png" alt="Cotemag Logo" class="login-logo">
+                    </div>
                     <div class="card-body">
+                        <?php if(isset($error)): ?>
+                            <div class="alert alert-danger"><?php echo $error; ?></div>
+                        <?php endif; ?>
                         <form method="POST" action="">
                             <div class="form-group">
                                 <label>Usuario</label>

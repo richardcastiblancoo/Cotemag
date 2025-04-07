@@ -16,7 +16,7 @@ $resultado = mysqli_query($conexion, $query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link rel="icon" href="logo5.png" type="image/png">
+    <link rel="icon" href="/Cotemag/assets/img/logo5.png" type="image/png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -24,7 +24,7 @@ $resultado = mysqli_query($conexion, $query);
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <img src="logo5.png" class="logo" alt="">
+            <img src="/Cotemag/assets/img/logo5.png" class="logo" alt="">
             <div class="navbar-nav ml-auto">
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <a href="dashboard.php" class="btn btn-outline-light mr-2">Dashboard</a>

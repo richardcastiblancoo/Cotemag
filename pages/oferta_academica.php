@@ -3947,67 +3947,8 @@
       </div>
     </div>
   </div>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-  const handleTabClick = (container, buttonSelector, contentSelector) => {
-    container.querySelectorAll(buttonSelector).forEach(button => {
-      button.addEventListener('click', () => {
-        container.querySelectorAll(buttonSelector).forEach(btn => btn.classList.remove('active'));
-        container.querySelectorAll(contentSelector).forEach(content => content.classList.remove('active'));
-        button.classList.add('active');
-        container.querySelector(`#${button.dataset.tab}`).classList.add('active');
-      });
-    });
-  };
 
-  handleTabClick(document, '.tab-button', '.tab-content');
-  document.querySelectorAll('.modal-tabs').forEach(modal => handleTabClick(modal, '.tab-button', '.modal-tab'));
-
-  document.querySelectorAll('.modal').forEach(modal => {
-    modal.addEventListener('click', e => e.target === modal && (window.location.href = '#'));
-  });
-  document.addEventListener('keydown', e => e.key === 'Escape' && (window.location.href = '#'));
-});
-
-</script>
-
-
-  <!-- <script>
-    document.addEventListener('DOMContentLoaded', () => {
-  const handleTabClick = (buttonsSelector, contentsSelector, containerSelector = document) => {
-    const buttons = containerSelector.querySelectorAll(buttonsSelector);
-    const contents = containerSelector.querySelectorAll(contentsSelector);
-    
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        const tabId = button.dataset.tab;
-        
-        buttons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        
-        contents.forEach(content => content.classList.remove('active'));
-        containerSelector.querySelector(`#${tabId}`).classList.add('active');
-      });
-    });
-  };
-
-  // Manejo de pestañas principales y modales
-  handleTabClick('.tab-button', '.tab-content');
-  document.querySelectorAll('.modal-tabs').forEach(modal => {
-    handleTabClick('.tab-button', '.modal-tab', modal);
-  });
-
-  // Cerrar modales al hacer clic fuera del contenido o presionar Escape
-  document.querySelectorAll('.modal').forEach(modal => {
-    modal.addEventListener('click', e => { if (e.target === modal) window.location.href = '#'; });
-  });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') window.location.href = '#'; });
-});
-
-  </script> -->
-
-
-  <!-- <script>
+  <script>
     // Script para manejar las pestañas
     document.addEventListener('DOMContentLoaded', function () {
       // Script para las pestañas principales
@@ -4077,7 +4018,7 @@
         }
       });
     });
-  </script> -->
+  </script>
 </body>
 
 </html>

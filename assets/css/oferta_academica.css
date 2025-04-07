@@ -230,3 +230,412 @@ img {
   font-size: 1.1rem;
   color: var(--primary);
 }
+
+.program-header p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+/* Hacer que el contenido ocupe el espacio disponible para empujar el footer hacia abajo */
+.program-content {
+  padding: 8px 12px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.program-detail {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.program-detail .icon {
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+/* Asegurar que el footer esté en la parte inferior de la tarjeta */
+.program-footer {
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+}
+
+/* Asegurar que todos los botones tengan el mismo tamaño */
+.program-footer .btn {
+  width: 100%;
+  text-align: center;
+  padding: 8px 10px;
+  font-size: 0.85rem;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Proceso de inscripción */
+.enrollment-process {
+  background-color: rgba(0, 51, 102, 0.05);
+  padding: 60px 0;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.enrollment-process h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+.enrollment-process p {
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.process-step {
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--border);
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background-color: var(--secondary);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.process-step h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.process-step p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  color: var(--text-secondary);
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+
+
+/* Estilos para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.modal:target {
+  display: block;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 30px auto;
+  max-width: 900px;
+  width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  color: var(--primary);
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.modal-close {
+  font-size: 2rem;
+  color: var(--text-light);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: var(--primary);
+}
+
+/* Modificar el estilo de modal-body para usar flexbox */
+.modal-body {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Ajustar el tamaño de la imagen para que ocupe el lado izquierdo */
+.modal-image {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Ajustar el contenido descriptivo para que ocupe el espacio restante */
+.modal-description {
+  flex: 1;
+  min-width: 300px;
+}
+
+.modal-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.highlight-item {
+  background-color: var(--background-alt);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.highlight-item .icon {
+  font-size: 1.5rem;
+  color: var(--secondary);
+  margin-bottom: 5px;
+  display: block;
+}
+
+.highlight-item h4 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: var(--primary);
+}
+
+.highlight-item p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.modal-tabs {
+  margin-top: 30px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modal-tab {
+  padding: 20px;
+  display: none;
+}
+
+.modal-tab.active {
+  display: block;
+}
+
+.modal-tab h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.curriculum-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.semester-block {
+  background-color: var(--background);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.semester-block h4 {
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.semester-block ul {
+  padding-left: 20px;
+}
+
+.semester-block li {
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 15px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.semester-block li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+}
+
+.requirements-list li,
+.opportunities-list li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.requirements-list li:before,
+.opportunities-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+}
+
+.modal-footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .program-detail-container {
+    grid-template-columns: 1fr;
+  }
+
+  .program-detail-sidebar {
+    order: -1;
+    margin-bottom: 30px;
+  }
+
+  .enrollment-card {
+    position: static;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .modal-body {
+    flex-direction: column;
+  }
+
+  .modal-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .hero {
+    padding: 40px 0 30px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .tab-list {
+    flex-wrap: wrap;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .confirmation-row {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-highlights {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .curriculum-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .program-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .program-highlights {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .modal-highlights {
+    grid-template-columns: 1fr;
+  }
+}
+

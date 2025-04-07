@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.mission-statement {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.mission-text {
+    color: white;
+    line-height: 1.5;
+}
+
+.divider {
+    border-top: 1px solid #f0c14b;
+    width: 4rem;
+    margin: 1.5rem auto;
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 1000px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .program-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.program-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tile-icon {
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+.tile-icon i {
+    font-size: 2.5rem;
+    color: #0066cc;
+}
+
+.tile-title {
+    text-align: center;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    line-height: 1.2;
+}
+
+.bg-blue {
+    background-color: #3498db;
+}
+
+.bg-yellow {
+    background-color: #f1c40f;
+}
+
+.bg-pink {
+    background-color: #f8a5c2;
+}
+
+.bg-purple {
+    background-color: #c8a2c8;
+}
+
+.bg-gray {
+    background-color: #95a5a6;
+}

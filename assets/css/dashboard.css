@@ -1,0 +1,18 @@
+.search-container {
+    position: relative;
+    min-width: 300px;
+}
+.post-item {
+    transition: all 0.3s ease;
+}
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+.card-img-top:hover {
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .search-container {
+        min-width: 200px;
+    }
+}

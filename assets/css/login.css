@@ -1,0 +1,96 @@
+body {
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    margin-top: 0 !important;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.card-header {
+    background: #2980b9;
+    padding: 20px;
+    border-bottom: none;
+}
+
+.card-header h3 {
+    color: white;
+    margin: 0;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 30px;
+    background: white;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 12px;
+    border: 2px solid #e3e3e3;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #2980b9;
+    box-shadow: none;
+}
+
+.btn-primary {
+    background: #2980b9;
+    border: none;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #2471a3;
+    transform: translateY(-2px);
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+.alert-danger {
+    border-radius: 8px;
+    border: none;
+}
+
+a {
+    color: #2980b9;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #2471a3;
+    text-decoration: none;
+}
+
+.login-logo {
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}

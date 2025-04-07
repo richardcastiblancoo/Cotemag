@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  <a href="../index.php"><h1>INICIO</h1></a>
   <main>
     <section class="hero">
       <div class="container">
@@ -37,7 +38,7 @@
               <!-- Auxiliar de Enfermería -->
               <a href="#modal-nursing" class="program-card">
                 <div class="program-image">
-                  <img src="img/Enfermeria.jpeg" alt="Auxiliar de Enfermería">
+                  <img src="../assets/img/Enfermeria1.jpg" alt="Auxiliar de Enfermería">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar de Enfermería</h3>
@@ -69,7 +70,7 @@
               <!-- Auxiliar en Salud Oral -->
               <a href="#modal-oral-health" class="program-card">
                 <div class="program-image">
-                  <img src="img/Salud_Oral_1080x10801.jpeg" alt="Auxiliar en Salud Oral">
+                  <img src="../assets/img/Salud_Oral_1080x1080.jpg" alt="Auxiliar en Salud Oral">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar en Salud Oral</h3>
@@ -101,7 +102,7 @@
               <!-- Auxiliar en Farmacia -->
               <a href="#modal-pharmacy" class="program-card">
                 <div class="program-image">
-                  <img src="img/Servicios_Farmaceuticos1.jpeg" alt="Auxiliar en Farmacia">
+                  <img src="../assets/img/Servicios_Farmaceuticos.jpg" alt="Auxiliar en Farmacia">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar en Farmacia</h3>
@@ -133,7 +134,7 @@
               <!-- Auxiliar en Clínica Veterinaria -->
               <a href="#modal-veterinary" class="program-card">
                 <div class="program-image">
-                  <img src="img/Veterianaria1.jpeg" alt="Auxiliar en Clínica Veterinaria">
+                  <img src="../assets/img/Veterianaria.jpg" alt="Auxiliar en Clínica Veterinaria">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar en Clínica Veterinaria</h3>
@@ -165,7 +166,7 @@
               <!-- Auxiliar en Salud y Seguridad en el Trabajo -->
               <a href="#modal-work-health" class="program-card">
                 <div class="program-image">
-                  <img src="img/SSGT1.jpeg" alt="Auxiliar en Salud y Seguridad en el Trabajo">
+                  <img src="../assets/img/SSGT.jpg" alt="Auxiliar en Salud y Seguridad en el Trabajo">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar en Salud y Seguridad en el Trabajo</h3>
@@ -197,7 +198,7 @@
               <!-- Diplomado de Laboratorio Clínico -->
               <a href="#modal-laboratory" class="program-card">
                 <div class="program-image">
-                  <img src="img/Laboratorio_Clinico_1080x10801.jpeg" alt="Diplomado de Laboratorio Clínico">
+                  <img src="../assets/img/Laboratorio_Clinico_1080x1080.jpg" alt="Diplomado de Laboratorio Clínico">
                 </div>
                 <div class="program-header">
                   <h3>Diplomado de Laboratorio Clínico</h3>
@@ -229,7 +230,7 @@
               <!-- Masaje y Rehabilitación Terapéutica -->
               <a href="#modal-massage" class="program-card">
                 <div class="program-image">
-                  <img src="img/Masaje_y_Rehabilitacion_Terapeutica_1080x10801.jpeg" alt="Masaje y Rehabilitación Terapéutica">
+                  <img src="../assets/img/Masaje_y_Rehabilitacion_Terapeutica_1080x1080.jpg" alt="Masaje y Rehabilitación Terapéutica">
                 </div>
                 <div class="program-header">
                   <h3>Masaje y Rehabilitación Terapéutica</h3>
@@ -266,7 +267,7 @@
               <!-- Auxiliar Contable -->
               <a href="#modal-accounting" class="program-card">
                 <div class="program-image">
-                  <img src="img/Auxiliar_Contable1.jpeg" alt="Auxiliar Contable">
+                  <img src="../assets/img/Auxiliar_Contable.jpg" alt="Auxiliar Contable">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar Contable</h3>
@@ -298,7 +299,7 @@
               <!-- Auxiliar de Mercadeo y Ventas -->
               <a href="#modal-marketing" class="program-card">
                 <div class="program-image">
-                  <img src="img/Mercadeo_y_Ventas1.jpeg" alt="Auxiliar de Mercadeo y Ventas">
+                  <img src="../assets/img/Mercadeo_y_Ventas.jpg" alt="Auxiliar de Mercadeo y Ventas">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar de Mercadeo y Ventas</h3>
@@ -330,7 +331,7 @@
               <!-- Auxiliar en Agente de Aduanas -->
               <a href="#modal-customs" class="program-card">
                 <div class="program-image">
-                  <img src="img/Agete_de_Aduanas_1080x10801.jpeg" alt="Auxiliar en Agente de Aduanas">
+                  <img src="../assets/img/Agete_de_Aduanas_1080x1080.jpg" alt="Auxiliar en Agente de Aduanas">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar en Agente de Aduanas</h3>
@@ -362,7 +363,7 @@
               <!-- Auxiliar Administrativo -->
               <a href="#modal-administrative" class="program-card">
                 <div class="program-image">
-                  <img src="img/Administracion_empresarial1.jpeg" alt="Auxiliar Administrativo">
+                  <img src="../assets/img/Administracion_empresarial.jpg" alt="Auxiliar Administrativo">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar Administrativo</h3>
@@ -394,7 +395,7 @@
               <!-- Auxiliar en Recepción Hotelera -->
               <a href="#modal-hotel" class="program-card">
                 <div class="program-image">
-                  <img src="img/Recepcion_Hotelera_1080x10801.jpeg" alt="Auxiliar en Recepción Hotelera">
+                  <img src="../assets/img/Recepcion_Hotelera_1080x1080.jpg" alt="Auxiliar en Recepción Hotelera">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar en Recepción Hotelera</h3>
@@ -426,7 +427,7 @@
               <!-- Auxiliar en Secretariado Ejecutivo -->
               <a href="#modal-secretary" class="program-card">
                 <div class="program-image">
-                  <img src="img/Secretariado_ejecutivo1.jpeg" alt="Auxiliar en Secretariado Ejecutivo">
+                  <img src="../assets/img/Secretariado_ejecutivo.jpg" alt="Auxiliar en Secretariado Ejecutivo">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar en Secretariado Ejecutivo</h3>
@@ -463,7 +464,7 @@
               <!-- Auxiliar en Atención a la Primera Infancia -->
               <a href="#modal-childhood" class="program-card">
                 <div class="program-image">
-                  <img src="img/Api1.jpeg" alt="Auxiliar en Atención a la Primera Infancia">
+                  <img src="../assets/img/Auxiliar en Atención a la Primera Infancia.jpg" alt="Auxiliar en Atención a la Primera Infancia">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar en Atención a la Primera Infancia</h3>
@@ -495,7 +496,7 @@
               <!-- Bachillerato Por Ciclos CLEI II - Grado 5to -->
               <a href="#modal-clei2" class="program-card">
                 <div class="program-image">
-                  <img src="img/CELI_II-51.jpeg" alt="Bachillerato Por Ciclos CLEI II - Grado 5to">
+                  <img src="../assets/img/CELI_II-5.jpg" alt="Bachillerato Por Ciclos CLEI II - Grado 5to">
                 </div>
                 <div class="program-header">
                   <h3>Bachillerato Por Ciclos CLEI II - Grado 5to</h3>
@@ -527,7 +528,7 @@
               <!-- Bachillerato Por Ciclos CLEI III - Grado 6to y 7mo -->
               <a href="#modal-clei3" class="program-card">
                 <div class="program-image">
-                  <img src="img/CLEI_III-6y71.jpeg" alt="Bachillerato Por Ciclos CLEI III - Grado 6to y 7mo">
+                  <img src="../assets/img/CLEI_III-6y7.jpg" alt="Bachillerato Por Ciclos CLEI III - Grado 6to y 7mo">
                 </div>
                 <div class="program-header">
                   <h3>Bachillerato Por Ciclos CLEI III - Grado 6to y 7mo</h3>
@@ -559,7 +560,7 @@
               <!-- Bachillerato Por Ciclos CLEI IV - Grado 8vo y 9no -->
               <a href="#modal-clei4" class="program-card">
                 <div class="program-image">
-                  <img src="img/CLEI_IV-8y91.jpeg" alt="Bachillerato Por Ciclos CLEI IV - Grado 8vo y 9no">
+                  <img src="../assets/img/CLEI_IV-8y9.jpg" alt="Bachillerato Por Ciclos CLEI IV - Grado 8vo y 9no">
                 </div>
                 <div class="program-header">
                   <h3>Bachillerato Por Ciclos CLEI IV - Grado 8vo y 9no</h3>
@@ -591,7 +592,7 @@
               <!-- Bachillerato Por Ciclos CLEI V - Grado 10mo -->
               <a href="#modal-clei5" class="program-card">
                 <div class="program-image">
-                  <img src="img/CLEI_V-101.jpeg" alt="Bachillerato Por Ciclos CLEI V - Grado 10mo">
+                  <img src="../assets/img/CLEI_V-10.jpg" alt="Bachillerato Por Ciclos CLEI V - Grado 10mo">
                 </div>
                 <div class="program-header">
                   <h3>Bachillerato Por Ciclos CLEI V - Grado 10mo</h3>
@@ -623,7 +624,7 @@
               <!-- Bachillerato Por Ciclos CLEI VI - Grado 11mo -->
               <a href="#modal-clei6" class="program-card">
                 <div class="program-image">
-                  <img src="img/CLEI_VI-111.jpeg" alt="Bachillerato Por Ciclos CLEI VI - Grado 11mo">
+                  <img src="../assets/img/CLEI_VI-11.jpg" alt="Bachillerato Por Ciclos CLEI VI - Grado 11mo">
                   alt="Bachillerato Por Ciclos CLEI VI - Grado 11mo">
                 </div>
                 <div class="program-header">
@@ -661,7 +662,7 @@
               <!-- Desarrollo Web -->
               <a href="#modal-web-dev" class="program-card">
                 <div class="program-image">
-                  <img src="img/Desarrollo_Web_1080x10801.jpeg" alt="Desarrollo Web">
+                  <img src="../assets/img/Desarrollo_Web_1080x1080.jpg" alt="Desarrollo Web">
                 </div>
                 <div class="program-header">
                   <h3>Desarrollo Web</h3>
@@ -693,7 +694,7 @@
               <!-- Auxiliar en Diseño Gráfico -->
               <a href="#modal-graphic-design" class="program-card">
                 <div class="program-image">
-                  <img src="img/Diseño_Grafico1.jpeg" alt="Auxiliar en Diseño Gráfico">
+                  <img src="../assets/img/Diseño_Grafico.jpg" alt="Auxiliar en Diseño Gráfico">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar en Diseño Gráfico</h3>
@@ -730,7 +731,7 @@
               <!-- Auxiliar de Chef de Alta Cocina -->
               <a href="#modal-chef" class="program-card">
                 <div class="program-image">
-                  <img src="img/Cocina1.jpeg" alt="Auxiliar de Chef de Alta Cocina">
+                  <img src="../assets/img/Cocina.jpg" alt="Auxiliar de Chef de Alta Cocina">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar de Chef de Alta Cocina</h3>
@@ -762,7 +763,7 @@
               <!-- Técnico Laboral por Competencias Repostero Pastelero -->
               <a href="#modal-pastry" class="program-card">
                 <div class="program-image">
-                  <img src="img/Resposteria1.jpeg" alt="Técnico Laboral por Competencias Repostero Pastelero">
+                  <img src="../assets/img/Resposteria.jpg" alt="Técnico Laboral por Competencias Repostero Pastelero">
                 </div>
                 <div class="program-header">
                   <h3>Repostero Pastelero</h3>
@@ -794,7 +795,7 @@
               <!-- Bartender -->
               <a href="#modal-bartender" class="program-card">
                 <div class="program-image">
-                  <img src="img/Bartender1080x10801.png" alt="Bartender">
+                  <img src="../assets/img/Bartender1080x1080.jpg" alt="Bartender">
                 </div>
                 <div class="program-header">
                   <h3>Bartender</h3>
@@ -831,7 +832,7 @@
               <!-- Inglés A1 y A2 -->
               <a href="#modal-english" class="program-card">
                 <div class="program-image">
-                  <img src="img/Ingles_1080x10801.jpeg" alt="Inglés A1 y A2">
+                  <img src="../assets/img/Ingles_1080x1080.jpg" alt="Inglés A1 y A2">
                 </div>
                 <div class="program-header">
                   <h3>Inglés A1 y A2</h3>
@@ -863,7 +864,7 @@
               <!-- Auxiliar en Investigación Criminalística y Judicial -->
               <a href="#modal-forensic" class="program-card">
                 <div class="program-image">
-                  <img src="img/Investigacion_Judicial_1080x10801.jpeg" alt="Auxiliar en Investigación Criminalística y Judicial">
+                  <img src="../assets/img/Investigacion_Judicial_1080x1080.jpg" alt="Auxiliar en Investigación Criminalística y Judicial">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar en Investigación Criminalística y Judicial</h3>
@@ -895,7 +896,7 @@
               <!-- Belleza Integral -->
               <a href="#modal-beauty" class="program-card">
                 <div class="program-image">
-                  <img src="img/Belleza_Integral_1080x1080_(2)1.png" alt="Belleza Integral">
+                  <img src="../assets/img/Belleza_Integral_1080x1080_(2).jpg" alt="Belleza Integral">
                 </div>
                 <div class="program-header">
                   <h3>Belleza Integral</h3>
@@ -927,7 +928,7 @@
               <!-- Cosmetología -->
               <a href="#modal-cosmetology" class="program-card">
                 <div class="program-image">
-                  <img src="img/Cosmetologia1080x10801.png" alt="Cosmetología">
+                  <img src="../assets/img/Cosmetologia1080x1080.jpg" alt="Cosmetología">
                 </div>
                 <div class="program-header">
                   <h3>Cosmetología</h3>
@@ -959,7 +960,7 @@
               <!-- Servicios Generales, Aseo y Cafetería -->
               <a href="#modal-services" class="program-card">
                 <div class="program-image">
-                  <img src="img/default.jpg" alt="Servicios Generales, Aseo y Cafetería">
+                  <img src="../assets/img/default (1).jpg" alt="Servicios Generales, Aseo y Cafetería">
                 </div>
                 <div class="program-header">
                   <h3>Servicios Generales, Aseo y Cafetería</h3>
@@ -1035,7 +1036,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Enfermeria.jpeg" alt="Auxiliar de Enfermería">
+          <img src="../assets/img/Enfermeria1.jpg" alt="Auxiliar de Enfermería">
         </div>
         <div class="modal-description">
           <p>El programa de Auxiliar de Enfermería de COTEMAG forma profesionales capacitados para desempeñarse en
@@ -1157,7 +1158,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Salud_Oral_1080x10801.jpeg" alt="Auxiliar en Salud Oral">
+          <img src="../assets/img/Salud_Oral_1080x1080.jpg" alt="Auxiliar en Salud Oral">
         </div>
         <div class="modal-description">
           <p>El programa de Auxiliar en Salud Oral forma profesionales capacitados para asistir en procedimientos
@@ -1278,7 +1279,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Servicios_Farmaceuticos1.jpeg" alt="Auxiliar en Farmacia">
+          <img src="../assets/img/Servicios_Farmaceuticos.jpg" alt="Auxiliar en Farmacia">
         </div>
         <div class="modal-description">
           <p>El programa de Auxiliar en Farmacia forma profesionales capacitados para la dispensación y manejo de
@@ -1399,7 +1400,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Veterianaria1.jpeg" alt="Auxiliar en Clínica Veterinaria">
+          <img src="../assets/img/Veterianaria.jpg" alt="Auxiliar en Clínica Veterinaria">
         </div>
         <div class="modal-description">
           <p>El programa de Auxiliar en Clínica Veterinaria forma profesionales capacitados para asistir en el cuidado y
@@ -1512,7 +1513,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/SSGT1.jpeg" alt="Auxiliar en Salud y Seguridad en el Trabajo">
+          <img src="../assets/img/SSGT.jpg" alt="Auxiliar en Salud y Seguridad en el Trabajo">
         </div>
         <div class="modal-description">
           <p>El programa de Auxiliar en Salud y Seguridad en el Trabajo forma profesionales capacitados para apoyar en
@@ -1625,7 +1626,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Laboratorio_Clinico_1080x10801.jpeg" alt="Diplomado de Laboratorio Clínico">
+          <img src="../assets/img/Laboratorio_Clinico_1080x1080.jpg" alt="Diplomado de Laboratorio Clínico">
         </div>
         <div class="modal-description">
           <p>El Diplomado de Laboratorio Clínico ofrece especialización en técnicas de análisis clínicos y manejo de
@@ -1721,7 +1722,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Masaje_y_Rehabilitacion_Terapeutica_1080x10801.jpeg" alt="Masaje y Rehabilitación Terapéutica">
+          <img src="../assets/img/Masaje_y_Rehabilitacion_Terapeutica_1080x1080.jpg" alt="Masaje y Rehabilitación Terapéutica">
         </div>
         <div class="modal-description">
           <p>El programa de Masaje y Rehabilitación Terapéutica forma profesionales capacitados en técnicas de masaje
@@ -1817,7 +1818,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Auxiliar_Contable1.jpeg" alt="Auxiliar Contable">
+          <img src="../assets/img/Auxiliar_Contable.jpg" alt="Auxiliar Contable">
         </div>
         <div class="modal-description">
           <p>El programa de Auxiliar Contable forma profesionales capacitados para apoyar en procesos contables y
@@ -1931,7 +1932,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Mercadeo_y_Ventas1.jpeg" alt="Auxiliar de Mercadeo y Ventas">
+          <img src="../assets/img/Mercadeo_y_Ventas.jpg" alt="Auxiliar de Mercadeo y Ventas">
         </div>
         <div class="modal-description">
           <p>El programa de Auxiliar de Mercadeo y Ventas forma profesionales capacitados en estrategias de
@@ -2044,7 +2045,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Agete_de_Aduanas_1080x10801.jpeg" alt="Auxiliar en Agente de Aduanas">
+          <img src="../assets/img/Agete_de_Aduanas_1080x1080.jpg" alt="Auxiliar en Agente de Aduanas">
         </div>
         <div class="modal-description">
           <p>El programa de Auxiliar en Agente de Aduanas forma profesionales capacitados en procesos de importación,
@@ -2158,7 +2159,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Administracion_empresarial1.jpeg" alt="Auxiliar Administrativo">
+          <img src="../assets/img/Administracion_empresarial.jpg" alt="Auxiliar Administrativo">
         </div>
         <div class="modal-description">
           <p>El programa de Auxiliar Administrativo forma profesionales capacitados para la gestión de procesos
@@ -2271,7 +2272,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Recepcion_Hotelera_1080x10801.jpeg" alt="Auxiliar en Recepción Hotelera">
+          <img src="../assets/img/Recepcion_Hotelera_1080x1080.jpg" alt="Auxiliar en Recepción Hotelera">
         </div>
         <div class="modal-description">
           <p>El programa de Auxiliar en Recepción Hotelera forma profesionales capacitados en atención al cliente y
@@ -2385,7 +2386,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Secretariado_ejecutivo1.jpeg" alt="Auxiliar en Secretariado Ejecutivo">
+          <img src="../assets/img/Secretariado_ejecutivo.jpg" alt="Auxiliar en Secretariado Ejecutivo">
         </div>
         <div class="modal-description">
           <p>El programa de Auxiliar en Secretariado Ejecutivo forma profesionales capacitados para asistencia
@@ -2499,7 +2500,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Api1.jpeg" alt="Auxiliar en Atención a la Primera Infancia">
+          <img src="../assets/img/Auxiliar en Atención a la Primera Infancia.jpg" alt="Auxiliar en Atención a la Primera Infancia">
         </div>
         <div class="modal-description">
           <p>El programa de Auxiliar en Atención a la Primera Infancia forma profesionales capacitados para el cuidado y
@@ -2612,7 +2613,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/CELI_II-51.jpeg" alt="Bachillerato Por Ciclos CLEI II - Grado 5to">
+          <img src="../assets/img/CELI_II-5.jpg" alt="Bachillerato Por Ciclos CLEI II - Grado 5to">
         </div>
         <div class="modal-description">
           <p>El programa de Bachillerato Por Ciclos CLEI II ofrece una educación flexible para completar el grado 5to,
@@ -2707,7 +2708,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/CLEI_III-6y71.jpeg" alt="Bachillerato Por Ciclos CLEI III - Grado 6to y 7mo">
+          <img src="../assets/img/CLEI_III-6y7.jpg" alt="Bachillerato Por Ciclos CLEI III - Grado 6to y 7mo">
         </div>
         <div class="modal-description">
           <p>El programa de Bachillerato Por Ciclos CLEI III ofrece una educación flexible para completar los grados 6to
@@ -2820,7 +2821,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Desarrollo_Web_1080x10801.jpeg" alt="Desarrollo Web">
+          <img src="../assets/img/Desarrollo_Web_1080x1080.jpg" alt="Desarrollo Web">
         </div>
         <div class="modal-description">
           <p>El programa de Desarrollo Web forma profesionales capacitados en diseño y programación de sitios y
@@ -2933,7 +2934,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Diseño_Grafico1.jpeg" alt="Auxiliar en Diseño Gráfico">
+          <img src="../assets/img/Diseño_Grafico.jpg" alt="Auxiliar en Diseño Gráfico">
         </div>
         <div class="modal-description">
           <p>El programa de Auxiliar en Diseño Gráfico forma profesionales capacitados en herramientas y técnicas de
@@ -3046,7 +3047,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Cocina1.jpeg" alt="Auxiliar de Chef de Alta Cocina">
+          <img src="../assets/img/Cocina.jpg" alt="Auxiliar de Chef de Alta Cocina">
         </div>
         <div class="modal-description">
           <p>El programa de Auxiliar de Chef de Alta Cocina forma profesionales capacitados en técnicas culinarias
@@ -3167,7 +3168,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Resposteria1.jpeg" alt="Repostero Pastelero">
+          <img src="../assets/img/Resposteria.jpg" alt="Repostero Pastelero">
         </div>
         <div class="modal-description">
           <p>El programa de Repostero Pastelero forma profesionales capacitados en técnicas de repostería y pastelería,
@@ -3287,7 +3288,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="https://placehold.co/1080x1080" alt="Bartender">
+          <img src="../assets/img/Bartender1080x1080.jpg" alt="Bartender">
         </div>
         <div class="modal-description">
           <p>El programa de Bartender forma profesionales capacitados en preparación de bebidas y coctelería
@@ -3400,7 +3401,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Ingles_1080x10801.jpeg" alt="Inglés A1 y A2">
+          <img src="../assets/img/Ingles_1080x1080.jpg" alt="Inglés A1 y A2">
         </div>
         <div class="modal-description">
           <p>El programa de Inglés A1 y A2 ofrece formación en idioma inglés a nivel básico e intermedio, con
@@ -3498,7 +3499,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Investigacion_Judicial_1080x10801.jpeg" alt="Auxiliar en Investigación Criminalística y Judicial">
+          <img src="../assets/img/Investigacion_Judicial_1080x1080.jpg" alt="Auxiliar en Investigación Criminalística y Judicial">
         </div>
         <div class="modal-description">
           <p>El programa de Auxiliar en Investigación Criminalística y Judicial forma profesionales capacitados en
@@ -3611,7 +3612,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Belleza_Integral_1080x1080_(2)1.png" alt="Belleza Integral">
+          <img src="../assets/img/Belleza_Integral_1080x1080_(2).jpg" alt="Belleza Integral">
         </div>
         <div class="modal-description">
           <p>El programa de Belleza Integral forma profesionales capacitados en servicios estéticos y de belleza
@@ -3732,7 +3733,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/Cosmetologia1080x10801.png" alt="Cosmetología">
+          <img src="../assets/img/Cosmetologia1080x1080.jpg" alt="Cosmetología">
         </div>
         <div class="modal-description">
           <p>El programa de Cosmetología forma profesionales especializados en tratamientos estéticos y cosméticos,
@@ -3853,7 +3854,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-image">
-          <img src="img/default.jpg" alt="Servicios Generales, Aseo y Cafetería">
+          <img src="../assets/img/default (1).jpg" alt="Servicios Generales, Aseo y Cafetería">
         </div>
         <div class="modal-description">
           <p>El programa de Servicios Generales, Aseo y Cafetería forma profesionales capacitados en limpieza y
@@ -4014,7 +4015,7 @@
       // También cerrar modales con la tecla Escape
       document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
-          window.location.href = '#';
+          window.location.href = '';
         }
       });
     });

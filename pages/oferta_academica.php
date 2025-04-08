@@ -4013,9 +4013,9 @@
       });
 
       // También cerrar modales con la tecla Escape
-      document.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape') {
-          window.location.href = 'health';
+      document.addEventListener('keydown', function (evento) {
+        if (evento.key === 'Escape') {
+          window.location.href = '#';
         }
       });
     });

@@ -9,6 +9,7 @@
 
 </head>
 <body>
+<?php include '../cotemag/includes/header.php'; ?>
     <h1>Quienes Somos?</h1>
     
     <div class="mission-statement">

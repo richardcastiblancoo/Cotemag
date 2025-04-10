@@ -11,7 +11,7 @@
     <h1>aqui va el header </h1>
     <a href="/cotemag/conocenos.php"> conocenos</a>
     <a href="#">novedades</a>
-    <a href="">programas</a>
+    <a href="../cotemag/pages/oferta_academica.php">programas</a>
 </body>
 
 </html>

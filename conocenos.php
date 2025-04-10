@@ -127,7 +127,7 @@
             <div class="tile-icon bg-gray">
                 <i class="fas fa-cogs"></i>
             </div>
-            <div class="tile-title">SERVICIOS GENERALES</div>
+            <div class="tile-title">Servicios Generales</div>
         </div>
     </div>
 </body>

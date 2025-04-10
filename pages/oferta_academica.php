@@ -3958,9 +3958,7 @@
 
       tabButtons.forEach(button => {
         button.addEventListener('click', function () {
-          // Remover clase active de todos los botones
           tabButtons.forEach(btn => btn.classList.remove('active'));
-          // Añadir clase active al botón clickeado
           this.classList.add('active');
 
           // Ocultar todos los contenidos
@@ -3986,7 +3984,6 @@
               btn.classList.remove('active');
             });
 
-            // Añadir active al botón clickeado
             this.classList.add('active');
 
             // Ocultar todos los contenidos en este modal

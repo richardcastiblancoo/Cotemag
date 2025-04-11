@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +14,14 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 2rem 1rem;
+}
+
+h2 {
+    color: #0066cc;
+}
+
+p {
+    color: black;
 }
 
 h1 {
@@ -31,6 +40,7 @@ h1 {
 .mission-text {
     color: white;
     line-height: 1.5;
+    background-color: black;
 }
 
 .divider {
@@ -57,6 +67,12 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.program-tile:hover {
+    transform: scale(1.05);
 }
 
 .tile-icon {
@@ -69,7 +85,7 @@ h1 {
 }
 
 .tile-icon i {
-    font-size: 4rem;
+    font-size: 2.5rem;
     color: #0066cc;
 }
 
@@ -98,4 +114,99 @@ h1 {
 
 .bg-gray {
     background-color: #95a5a6;
+}
+
+/* Modales - ESTILOS MEJORADOS */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5vh auto;
+    padding: 0;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+}
+
+.modal-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.modal-body {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.close {
+    color: #666;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Estilos para el contenido del modal */
+.modal-content h2 {
+    margin-top: 0;
+    color: #0066cc;
+    font-size: 1.5rem;
+}
+
+.modal-content p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10vh auto;
+    }
 }

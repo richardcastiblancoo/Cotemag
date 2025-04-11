@@ -53,6 +53,5 @@ Este es un sistema web desarrollado en HTML, CSS, JAVASCRIPT, PHP, MYSQL, que pe
 
 ## 📜 Licencia
 Este proyecto está bajo la licencia de COTEMAG.
-
 ---
 ✨ _Desarrollado por COTEMAG_ ✨

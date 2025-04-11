@@ -52,9 +52,16 @@ if(isset($_POST['login'])) {
     <link rel="icon" href="/Cotemag/assets/img/logo5.png" type="image/png">
 </head>
 <body>
+    
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
+                <a href="index.php" class="back-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5"/>
+                        <polyline points="12 19 5 12 12 5"/>
+                    </svg>
+                </a>
                 <div class="card">
                     <div class="card-header">
                         <h3 class="text-center">Administrador Blog</h3>

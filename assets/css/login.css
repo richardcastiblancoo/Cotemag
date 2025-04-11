@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    background: linear-gradient(120deg, #a9cde6, #302733);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -76,12 +76,11 @@ body {
 }
 
 a {
-    color: #2980b9;
-    transition: all 0.3s ease;
+    color: black;
 }
 
 a:hover {
-    color: #2471a3;
+    color: wheat;
     text-decoration: none;
 }
 
@@ -93,4 +92,16 @@ a:hover {
 
 .text-center {
     text-align: center;
+}
+
+.back-arrow {
+    position: absolute;
+    left: 0;
+    top: -30px;
+    color: wheat;
+    transition: color 0.3s ease;
+}
+
+.back-arrow:hover {
+    color: black;
 }

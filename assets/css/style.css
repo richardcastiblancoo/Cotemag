@@ -101,7 +101,7 @@ ul, li {
 }
 
 /* Add margin to the main content to account for fixed header */
-main {
+.main {
     background-image: url(/cotemag/assets/img/portada-about.png);
     width: 100%;
     height: 100vh;
@@ -172,7 +172,6 @@ main {
     color: #343a40;
     font-size: 2.5rem;
     font-weight: bold;
-    margin-top: 1200px;
 }
 
 /* card */

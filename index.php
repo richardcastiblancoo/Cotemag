@@ -20,16 +20,21 @@ $resultado = mysqli_query($conexion, $query);
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/cotemag/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/cotemag/assets/css/oferta_academica.css">
     <title>Cotemag - Bienvenidos a la Corporación Técnica del Magdalena</title>
 </head>
 
 <body>
     <?php include '../cotemag/includes/header.php'; ?>
 
+
     <?php include '../cotemag/includes/about.php'; ?>
 
+
+
     <?php include '../cotemag/includes/blog.php'; ?>
-   
+
+     <?php include '../Cotemag/includes/oferta_academica.php'; ?>   
 
     <!-- Footer -->
     <?php include '../cotemag/includes/footer.php'; ?>

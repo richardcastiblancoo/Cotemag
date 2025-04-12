@@ -74,15 +74,44 @@ $resultado = mysqli_query($conexion, $query);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Cotemag</title>
+    <link rel="icon" href="/Cotemag/assets/img/logo5.png" type="image/png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/dashboard.css">
-    <link rel="icon" href="logo5.png" type="image/png">
+    <link rel="stylesheet" href="/cotemag/assets/css/dashboard.css">
+    <style>
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .navbar {
+            padding: 0.5rem 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .card {
+            border: none;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        .card-header {
+            border-radius: 10px 10px 0 0 !important;
+        }
+        .btn {
+            border-radius: 5px;
+            padding: 0.5rem 1.5rem;
+        }
+        .search-container input {
+            border-radius: 20px;
+            padding-left: 15px;
+        }
+    </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.php">Cotemag</a>
+            <a class="navbar-brand" href="index.php">
+                <img src="/cotemag/assets/img/logo5.png" alt="Cotemag Logo">
+                Cotemag
+            </a>
             <div class="navbar-nav ml-auto d-flex flex-row align-items-center">
                 <div class="mr-3 search-container">
                     <input type="text" id="searchPost" class="form-control" placeholder="Buscar por título, contenido o fecha...">
@@ -197,11 +226,11 @@ $resultado = mysqli_query($conexion, $query);
         </div>
 
         <!-- Update the scripts section at the bottom -->
-        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="main.js"></script>
+        <script src="/cotemag/scripts/main.js"></script>
 </body>
 
 </html>

@@ -8,7 +8,7 @@ if (!isset($_POST['login']) && isset($_COOKIE['remembered_user'])) {
     $password = $_COOKIE['remembered_pass'];
 }
 
-if(isset($_POST['login'])) {
+if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $remember = isset($_POST['remember']) ? true : false;
@@ -16,13 +16,13 @@ if(isset($_POST['login'])) {
     $query = "SELECT * FROM usuarios WHERE username = '$username'";
     $result = mysqli_query($conexion, $query);
 
-    if($row = mysqli_fetch_assoc($result)) {
-        if(password_verify($password, $row['password'])) {
+    if ($row = mysqli_fetch_assoc($result)) {
+        if (password_verify($password, $row['password'])) {
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['username'] = $row['username'];
 
             // Set cookies if remember me is checked
-            if($remember) {
+            if ($remember) {
                 setcookie('remembered_user', $username, time() + (30 * 24 * 60 * 60), '/');
                 setcookie('remembered_pass', $password, time() + (30 * 24 * 60 * 60), '/');
             } else {
@@ -43,6 +43,7 @@ if(isset($_POST['login'])) {
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,15 +52,17 @@ if(isset($_POST['login'])) {
     <link rel="stylesheet" href="/Cotemag/assets/css/login.css">
     <link rel="icon" href="/Cotemag/assets/img/logo5.png" type="image/png">
 </head>
+
 <body>
-    
+
+
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <a href="index.php" class="back-arrow">
                     <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M19 12H5"/>
-                        <polyline points="12 19 5 12 12 5"/>
+                        <path d="M19 12H5" />
+                        <polyline points="12 19 5 12 12 5" />
                     </svg>
                 </a>
                 <div class="card">
@@ -70,23 +73,23 @@ if(isset($_POST['login'])) {
                         <img src="/Cotemag/assets/img/logo5.png" alt="Cotemag Logo" class="login-logo">
                     </div>
                     <div class="card-body">
-                        <?php if(isset($error)): ?>
+                        <?php if (isset($error)): ?>
                             <div class="alert alert-danger"><?php echo $error; ?></div>
                         <?php endif; ?>
                         <form method="POST" action="">
                             <div class="form-group">
                                 <label>Usuario</label>
-                                <input type="text" name="username" class="form-control" 
+                                <input type="text" name="username" class="form-control"
                                     value="<?php echo isset($username) ? htmlspecialchars($username) : ''; ?>" required>
                             </div>
                             <div class="form-group">
                                 <label>Contraseña</label>
-                                <input type="password" name="password" class="form-control" 
+                                <input type="password" name="password" class="form-control"
                                     value="<?php echo isset($password) ? htmlspecialchars($password) : ''; ?>" required>
                             </div>
                             <div class="form-group">
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="remember" name="remember" 
+                                    <input type="checkbox" class="custom-control-input" id="remember" name="remember"
                                         <?php echo isset($_COOKIE['remembered_user']) ? 'checked' : ''; ?>>
                                     <label class="custom-control-label" for="remember">Recordar mis datos</label>
                                 </div>
@@ -102,4 +105,5 @@ if(isset($_POST['login'])) {
         </div>
     </div>
 </body>
+
 </html>

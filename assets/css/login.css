@@ -97,7 +97,7 @@ a:hover {
 .back-arrow {
     position: absolute;
     left: 0;
-    top: -30px;
+    top: -50px;
     color: wheat;
     transition: color 0.3s ease;
 }

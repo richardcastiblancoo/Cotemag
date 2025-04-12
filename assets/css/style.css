@@ -107,6 +107,7 @@ main {
     height: 100vh;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-section {
@@ -161,8 +162,6 @@ main {
 
 /**/
 
-
-
 .container-text {
     text-align: center;
     padding: 40px 0;
@@ -173,7 +172,7 @@ main {
     color: #343a40;
     font-size: 2.5rem;
     font-weight: bold;
-    margin-top: 150px;
+    margin-top: 1200px;
 }
 
 /* card */

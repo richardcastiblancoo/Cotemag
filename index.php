@@ -30,11 +30,11 @@ $resultado = mysqli_query($conexion, $query);
 
     <?php include '../cotemag/includes/about.php'; ?>
 
+    <?php include '../Cotemag/includes/oferta_academica.php'; ?>   
 
 
     <?php include '../cotemag/includes/blog.php'; ?>
 
-     <?php include '../Cotemag/includes/oferta_academica.php'; ?>   
 
     <!-- Footer -->
     <?php include '../cotemag/includes/footer.php'; ?>

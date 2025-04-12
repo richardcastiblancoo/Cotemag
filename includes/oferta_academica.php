@@ -1,5 +1,5 @@
 <section>
-<main>
+  <main class="main-2">
     <section class="hero">
       <div class="container">
         <h1>Nuestras Carreras</h1>
@@ -26,7 +26,7 @@
               <!-- Auxiliar de Enfermería -->
               <a href="#modal-nursing" class="program-card">
                 <div class="program-image">
-                  <img src="../assets/img/Enfermeria1.jpg" alt="Auxiliar de Enfermería">
+                  <img src="/cotemag/assets/img/Enfermeria1.jpg" alt="Auxiliar de Enfermería">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar de Enfermería</h3>
@@ -58,7 +58,7 @@
               <!-- Auxiliar en Salud Oral -->
               <a href="#modal-oral-health" class="program-card">
                 <div class="program-image">
-                  <img src="../assets/img/Salud_Oral_1080x1080.jpg" alt="Auxiliar en Salud Oral">
+                  <img src="/cotemag/assets/img/Salud_Oral_1080x1080.jpg" alt="Auxiliar en Salud Oral">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar en Salud Oral</h3>
@@ -90,7 +90,7 @@
               <!-- Auxiliar en Farmacia -->
               <a href="#modal-pharmacy" class="program-card">
                 <div class="program-image">
-                  <img src="../assets/img/Servicios_Farmaceuticos.jpg" alt="Auxiliar en Farmacia">
+                  <img src="/cotemag/assets/img/Servicios_Farmaceuticos.jpg" alt="Auxiliar en Farmacia">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar en Farmacia</h3>
@@ -3936,73 +3936,73 @@
       </div>
     </div>
   </div>
-  </section>
+</section>
 
-  <script>
-    // Script para manejar las pestañas
-    document.addEventListener('DOMContentLoaded', function () {
-      // Script para las pestañas principales
-      const tabButtons = document.querySelectorAll('.tab-button');
-      const tabContents = document.querySelectorAll('.tab-content');
+<script>
+  // Script para manejar las pestañas
+  document.addEventListener('DOMContentLoaded', function() {
+    // Script para las pestañas principales
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
 
-      tabButtons.forEach(button => {
-        button.addEventListener('click', function () {
-          tabButtons.forEach(btn => btn.classList.remove('active'));
+    tabButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+
+        // Ocultar todos los contenidos
+        tabContents.forEach(content => content.classList.remove('active'));
+        // Mostrar el contenido correspondiente
+        const tabId = this.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+
+    // Script para las pestañas dentro de los modales
+    const modalTabButtons = document.querySelectorAll('.modal-tabs .tab-button');
+    const modalTabContents = document.querySelectorAll('.modal-tab');
+
+    if (modalTabButtons.length > 0) {
+      modalTabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const tabId = this.getAttribute('data-tab');
+          const tabsContainer = this.closest('.modal-tabs');
+
+          // Remover active de todos los botones en este contenedor
+          tabsContainer.querySelectorAll('.tab-button').forEach(btn => {
+            btn.classList.remove('active');
+          });
+
           this.classList.add('active');
 
-          // Ocultar todos los contenidos
-          tabContents.forEach(content => content.classList.remove('active'));
-          // Mostrar el contenido correspondiente
-          const tabId = this.getAttribute('data-tab');
-          document.getElementById(tabId).classList.add('active');
-        });
-      });
-
-      // Script para las pestañas dentro de los modales
-      const modalTabButtons = document.querySelectorAll('.modal-tabs .tab-button');
-      const modalTabContents = document.querySelectorAll('.modal-tab');
-
-      if (modalTabButtons.length > 0) {
-        modalTabButtons.forEach(button => {
-          button.addEventListener('click', function () {
-            const tabId = this.getAttribute('data-tab');
-            const tabsContainer = this.closest('.modal-tabs');
-
-            // Remover active de todos los botones en este contenedor
-            tabsContainer.querySelectorAll('.tab-button').forEach(btn => {
-              btn.classList.remove('active');
-            });
-
-            this.classList.add('active');
-
-            // Ocultar todos los contenidos en este modal
-            tabsContainer.querySelectorAll('.modal-tab').forEach(content => {
-              content.classList.remove('active');
-            });
-
-            // Mostrar el contenido correspondiente
-            tabsContainer.querySelector(`#${tabId}`).classList.add('active');
+          // Ocultar todos los contenidos en este modal
+          tabsContainer.querySelectorAll('.modal-tab').forEach(content => {
+            content.classList.remove('active');
           });
-        });
-      }
 
-      // Cerrar modales al hacer clic fuera del contenido
-      const modals = document.querySelectorAll('.modal');
-      modals.forEach(modal => {
-        modal.addEventListener('click', function (event) {
-          // Si el clic fue directamente en el fondo del modal (no en su contenido)
-          if (event.target === modal) {
-            // Redirigir a # para cerrar el modal
-            window.location.href = '#';
-          }
+          // Mostrar el contenido correspondiente
+          tabsContainer.querySelector(`#${tabId}`).classList.add('active');
         });
       });
+    }
 
-      // También cerrar modales con la tecla Escape
-      document.addEventListener('keydown', function (evento) {
-        if (evento.key === 'Escape') {
+    // Cerrar modales al hacer clic fuera del contenido
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      modal.addEventListener('click', function(event) {
+        // Si el clic fue directamente en el fondo del modal (no en su contenido)
+        if (event.target === modal) {
+          // Redirigir a # para cerrar el modal
           window.location.href = '#';
         }
       });
     });
-  </script>
+
+    // También cerrar modales con la tecla Escape
+    document.addEventListener('keydown', function(evento) {
+      if (evento.key === 'Escape') {
+        window.location.href = '#';
+      }
+    });
+  });
+</script>

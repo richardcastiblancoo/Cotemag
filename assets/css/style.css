@@ -100,7 +100,6 @@ ul, li {
     color: wheat;
 }
 
-/* Add margin to the main content to account for fixed header */
 .main {
     background-image: url(/cotemag/assets/img/portada-about.png);
     width: 100%;
@@ -175,35 +174,58 @@ ul, li {
 }
 
 /* card */
-.card {
-    max-width: 350px;
-    margin: 0 auto;
+
+.modal-ancho {
+    max-width: 800px !important;
 }
-.card-img-top {
-    height: 180px;
-    object-fit: cover;
+
+.texto-izquierda {
+    text-align: left !important;
 }
-.card-title {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+
+.imagen-fluida {
+    max-width: 100%;
+    height: auto;
 }
-.card-text {
-    font-size: 0.9rem;
-    line-height: 1.4;
+
+.contenido-modal {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-.text-muted {
-    font-size: 0.8rem;
+
+.boton-cerrar {
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
-.card-body {
-    padding: 1rem;
+
+.tarjeta {
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
 }
-.btn-read-more {
-    font-size: 0.9rem;
-    padding: 0.3rem 0.8rem;
+
+.imagen-tarjeta {
+    width: 100%;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
 }
-.modal-body {
-    white-space: pre-line;
+
+.cuerpo-tarjeta {
+    padding: 1.25rem;
 }
+
+.titulo-tarjeta {
+    margin-bottom: .75rem;
+}
+
+.texto-tarjeta {
+    margin-bottom: 1rem;
+}
+
+.boton-leer-mas {
+    margin-bottom: 1rem;
+}
+
 
 
 /* footer */
@@ -226,9 +248,10 @@ ul, li {
     flex: 0 0 25%;
 }
 
+
 .footer-brand img {
-    width: 200px;
-    height: 100px;
+    width: 300px;
+    height: auto;
     margin-bottom: 1rem;
 }
 

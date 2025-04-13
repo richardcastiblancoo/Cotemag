@@ -10,7 +10,9 @@
 </head>
 
 <body>
-  <a href="../index.php"><h1>INICIO</h1></a>
+  <a href="../index.php">
+    <h1>INICIO</h1>
+  </a>
   <main>
     <section class="hero">
       <div class="container">
@@ -3949,15 +3951,18 @@
     </div>
   </div>
 
+  
+
+
   <script>
     // Script para manejar las pestañas
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
       // Script para las pestañas principales
       const tabButtons = document.querySelectorAll('.tab-button');
       const tabContents = document.querySelectorAll('.tab-content');
 
       tabButtons.forEach(button => {
-        button.addEventListener('click', function () {
+        button.addEventListener('click', function() {
           tabButtons.forEach(btn => btn.classList.remove('active'));
           this.classList.add('active');
 
@@ -3975,7 +3980,7 @@
 
       if (modalTabButtons.length > 0) {
         modalTabButtons.forEach(button => {
-          button.addEventListener('click', function () {
+          button.addEventListener('click', function() {
             const tabId = this.getAttribute('data-tab');
             const tabsContainer = this.closest('.modal-tabs');
 
@@ -4000,7 +4005,7 @@
       // Cerrar modales al hacer clic fuera del contenido
       const modals = document.querySelectorAll('.modal');
       modals.forEach(modal => {
-        modal.addEventListener('click', function (event) {
+        modal.addEventListener('click', function(event) {
           // Si el clic fue directamente en el fondo del modal (no en su contenido)
           if (event.target === modal) {
             // Redirigir a # para cerrar el modal
@@ -4010,7 +4015,7 @@
       });
 
       // También cerrar modales con la tecla Escape
-      document.addEventListener('keydown', function (evento) {
+      document.addEventListener('keydown', function(evento) {
         if (evento.key === 'Escape') {
           window.location.href = '#';
         }
@@ -4018,4 +4023,5 @@
     });
   </script>
 </body>
+
 </html>

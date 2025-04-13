@@ -17,6 +17,7 @@ $resultado = mysqli_query($conexion, $query);
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="icon" href="/Cotemag/assets/img/logo5.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/cotemag/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

@@ -12,18 +12,23 @@
              $counter++;
              $hideClass = $counter > 3 ? 'hidden-post d-none' : '';
          ?>
-             <div class="col-md-4 mb-4 blog-post <?php echo $hideClass; ?>">
-                 <div class="card">
+             <div class="col-md-4 mb-4 publicacion-blog <?php echo $hideClass; ?>">
+                 <div class="tarjeta">
                      <?php if ($post['imagen']): ?>
-                         <img src="<?php echo $post['imagen']; ?>" class="card-img-top" alt="<?php echo $post['titulo']; ?>">
+                         <img src="<?php echo $post['imagen']; ?>" class="imagen-tarjeta" alt="<?php echo $post['titulo']; ?>">
                      <?php endif; ?>
-                     <div class="card-body">
-                         <h5 class="card-title"><?php echo $post['titulo']; ?></h5>
-                         <p class="card-text"><?php echo substr($post['contenido'], 0, 200) . '...'; ?></p>
-                         <button type="button" class="btn btn-primary btn-sm btn-read-more" data-toggle="modal" data-target="#modal<?php echo $post['id']; ?>">
+                     <div class="cuerpo-tarjeta">
+                         <h5 class="titulo-tarjeta"><?php echo $post['titulo']; ?></h5>
+                         <p class="texto-tarjeta"><?php echo substr($post['contenido'], 0, 200) . '...'; ?></p>
+                         <button type="button" class="btn btn-primary btn-sm boton-leer-mas" 
+                             onclick="mostrarDetallesPost('<?php echo htmlspecialchars($post['titulo'], ENT_QUOTES); ?>', 
+                                           '<?php echo htmlspecialchars($post['contenido'], ENT_QUOTES); ?>', 
+                                           '<?php echo htmlspecialchars($post['imagen'], ENT_QUOTES); ?>', 
+                                           '<?php echo htmlspecialchars($post['username'], ENT_QUOTES); ?>', 
+                                           '<?php echo htmlspecialchars($post['fecha_publicacion'], ENT_QUOTES); ?>')">
                              Leer más
                          </button>
-                         <p class="text-muted mt-2">
+                         <p class="texto-muted mt-2">
                              Por: <?php echo $post['username']; ?><br>
                              Publicado el: <?php echo $post['fecha_publicacion']; ?>
                          </p>
@@ -61,17 +66,74 @@
  </div>
 
  <div class="container text-center mb-4">
-     <button id="loadMoreBtn" class="btn btn-primary">Ver más posts</button>
+     <button id="botonCargarMas" class="btn btn-primary">Ver más publicaciones</button>
  </div>
 
 <script>
-document.getElementById('loadMoreBtn').addEventListener('click', function() {
-    const hiddenPosts = document.querySelectorAll('.hidden-post');
-    hiddenPosts.forEach(post => {
-        post.classList.remove('d-none');
+function mostrarDetallesPost(titulo, contenido, imagen, usuario, fecha) {
+    Swal.fire({
+        title: titulo,
+        html: `
+            ${imagen ? `<img src="${imagen}" class="imagen-fluida mb-3" alt="${titulo}">` : ''}
+            <div class="contenido-modal">${contenido}</div>
+            <hr>
+            <p class="texto-muted">
+                Por: ${usuario}<br>
+                Publicado el: ${fecha}
+            </p>
+        `,
+        width: '800px',
+        heightAuto: false,
+        height: '80vh',
+        showCloseButton: true,
+        showConfirmButton: false,
+        customClass: {
+            popup: 'modal-ancho',
+            content: 'texto-izquierda contenido-scrollable',
+            closeButton: 'boton-cerrar',
+            htmlContainer: 'contenedor-html'
+        }
     });
+}
+
+let contadorPosts = 3;
+const incremento = 3;
+
+document.getElementById('botonCargarMas').addEventListener('click', function() {
+    const postsOcultos = document.querySelectorAll('.publicacion-blog.d-none');
     
-    // Hide the button after showing all posts
-    this.style.display = 'none';
+    for(let i = 0; i < incremento && i < postsOcultos.length; i++) {
+        postsOcultos[i].classList.remove('d-none');
+    }
+    
+    if (postsOcultos.length <= incremento) {
+        this.style.display = 'none';
+    }
 });
 </script>
+
+<style>
+.modal-ancho {
+    max-width: 800px !important;
+    max-height: 90vh !important;
+}
+
+.contenido-scrollable {
+    overflow-y: auto;
+    max-height: calc(80vh - 100px);
+    padding-right: 10px;
+}
+
+.contenedor-html {
+    margin: 0;
+    padding: 15px;
+}
+
+.contenido-modal {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+</style>

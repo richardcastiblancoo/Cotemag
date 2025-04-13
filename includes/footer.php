@@ -16,35 +16,39 @@
 
         <div class="footer-nav">
             <div class="footer-column">
-                <h3>Solutions</h3>
+                <h3>Sobre Cotemag</h3>
                 <ul>
-                    <li><a href="#">Marketing</a></li>
-                    <li><a href="#">Analytics</a></li>
-                    <li><a href="#">Automation</a></li>
-                    <li><a href="#">Commerce</a></li>
-                    <li><a href="#">Insights</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Novedades</a></li>
+                    <li><a href="#">Conocenos</a></li>
+                    <li><a href="#">Programas</a></li>
+                    <li><a href="#">Contacto</a></li>
                 </ul>
             </div>
 
             <div class="footer-column">
-                <h3>Support</h3>
+                <h3>Soporte y Contáctanos</h3>
                 <ul>
-                    <li><a href="#">Submit ticket</a></li>
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">Guides</a></li>
+                    <li><a href="#">PQR</a></li>
+                    <li><a href="#">Blog Noticias</a></li>
+                    <li><a href="#">(+57) 3004813444</a></li>
+                    <li><a href="#">direcciongeneral@cotemag.edu.co</a></li>
+                    <li><a href="#">Avenida Los Estudiantes #17 - 46</a></li>
                 </ul>
             </div>
 
             <div class="footer-column">
-                <h3>Company</h3>
+                <h3>Redes Sociales</h3>
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Jobs</a></li>
-                    <li><a href="#">Press</a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    <li><a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
                 </ul>
             </div>
         </div>
+    </div>
     </div>
     <div class="footer-bottom">
         <p>&copy; <?php echo date('Y'); ?> Cotemag, Corporación Técnica del Magdalena todos los derechos de autor reservados.</p>

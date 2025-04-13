@@ -1,139 +1,79 @@
-<!-- Contenido de las noticias -->
-<div class="container-text">
-     <div class="container">
-         <h2 class="h2">Blog Entérate de nuestras actividades</h2>
-     </div>
- </div>
- <div class="container mt-4">
-     <div class="row">
-         <?php 
-         $counter = 0;
-         while ($post = mysqli_fetch_assoc($resultado)): 
-             $counter++;
-             $hideClass = $counter > 3 ? 'hidden-post d-none' : '';
-         ?>
-             <div class="col-md-4 mb-4 publicacion-blog <?php echo $hideClass; ?>">
-                 <div class="tarjeta">
-                     <?php if ($post['imagen']): ?>
-                         <img src="<?php echo $post['imagen']; ?>" class="imagen-tarjeta" alt="<?php echo $post['titulo']; ?>">
-                     <?php endif; ?>
-                     <div class="cuerpo-tarjeta">
-                         <h5 class="titulo-tarjeta"><?php echo $post['titulo']; ?></h5>
-                         <p class="texto-tarjeta"><?php echo substr($post['contenido'], 0, 200) . '...'; ?></p>
-                         <button type="button" class="btn btn-primary btn-sm boton-leer-mas" 
-                             onclick="mostrarDetallesPost('<?php echo htmlspecialchars($post['titulo'], ENT_QUOTES); ?>', 
-                                           '<?php echo htmlspecialchars($post['contenido'], ENT_QUOTES); ?>', 
-                                           '<?php echo htmlspecialchars($post['imagen'], ENT_QUOTES); ?>', 
-                                           '<?php echo htmlspecialchars($post['username'], ENT_QUOTES); ?>', 
-                                           '<?php echo htmlspecialchars($post['fecha_publicacion'], ENT_QUOTES); ?>')">
-                             Leer más
-                         </button>
-                         <p class="texto-muted mt-2">
-                             Por: <?php echo $post['username']; ?><br>
-                             Publicado el: <?php echo $post['fecha_publicacion']; ?>
-                         </p>
-                     </div>
-                 </div>
-             </div>
+<?php
+// Ensure database connection is available
+if (!isset($conexion)) {
+    $conexion = mysqli_connect("localhost", "root", "", "cotemag");
+}
 
+// Fetch all posts ordered by publication date
+$query = "SELECT n.*, u.username 
+          FROM noticias n 
+          JOIN usuarios u ON n.autor_id = u.id 
+          ORDER BY n.fecha_publicacion DESC";
+$resultado = mysqli_query($conexion, $query);
+?>
 
-             <!-- Modal for each post -->
-             <div class="modal fade" id="modal<?php echo $post['id']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
-                 <div class="modal-dialog modal-lg">
-                     <div class="modal-content">
-                         <div class="modal-header">
-                             <h5 class="modal-title"><?php echo $post['titulo']; ?></h5>
-                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                 <span aria-hidden="true">&times;</span>
-                             </button>
-                         </div>
-                         <div class="modal-body">
-                             <?php if ($post['imagen']): ?>
-                                 <img src="<?php echo $post['imagen']; ?>" class="img-fluid mb-3" alt="<?php echo $post['titulo']; ?>">
-                             <?php endif; ?>
-                             <?php echo $post['contenido']; ?>
-                             <hr>
-                             <p class="text-muted">
-                                 Por: <?php echo $post['username']; ?><br>
-                                 Publicado el: <?php echo $post['fecha_publicacion']; ?>
-                             </p>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         <?php endwhile; ?>
-     </div>
- </div>
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Blog Cotemag</h1>
+    <div class="row">
+        <?php 
+        $counter = 0;
+        while ($post = mysqli_fetch_assoc($resultado)): 
+            $visibility = $counter >= 3 ? 'style="display: none;"' : '';
+        ?>
+            <div class="col-md-4 post-item" <?php echo $visibility; ?>>
+                <div class="card post-card mb-4">
+                    <?php if (!empty($post['imagen'])): ?>
+                        <img src="<?php echo $post['imagen']; ?>" class="card-img-top post-image" alt="Post image">
+                    <?php endif; ?>
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo htmlspecialchars($post['titulo']); ?></h5>
+                        <p class="card-text"><?php echo substr(htmlspecialchars($post['contenido']), 0, 150) . '...'; ?></p>
+                        <p class="card-text">
+                            <small class="text-muted">
+                                Por: <?php echo htmlspecialchars($post['username']); ?><br>
+                                <?php echo date('d M Y', strtotime($post['fecha_publicacion'])); ?>
+                            </small>
+                        </p>
+                        <a href="post.php?id=<?php echo $post['id']; ?>" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        <?php 
+            $counter++;
+        endwhile; 
+        ?>
+    </div>
+    
+    <?php if ($counter > 3): ?>
+        <div class="text-center mt-4 mb-5">
+            <button id="loadMore" class="btn btn-outline-primary btn-lg">
+                <i class="fas fa-plus-circle mr-2"></i>Ver más posts
+            </button>
+        </div>
+    <?php endif; ?>
+</div>
 
- <div class="container text-center mb-4">
-     <button id="botonCargarMas" class="btn btn-primary">Ver más publicaciones</button>
- </div>
+<!-- Add jQuery if not already included -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
-function mostrarDetallesPost(titulo, contenido, imagen, usuario, fecha) {
-    Swal.fire({
-        title: titulo,
-        html: `
-            ${imagen ? `<img src="${imagen}" class="imagen-fluida mb-3" alt="${titulo}">` : ''}
-            <div class="contenido-modal">${contenido}</div>
-            <hr>
-            <p class="texto-muted">
-                Por: ${usuario}<br>
-                Publicado el: ${fecha}
-            </p>
-        `,
-        width: '800px',
-        heightAuto: false,
-        height: '80vh',
-        showCloseButton: true,
-        showConfirmButton: false,
-        customClass: {
-            popup: 'modal-ancho',
-            content: 'texto-izquierda contenido-scrollable',
-            closeButton: 'boton-cerrar',
-            htmlContainer: 'contenedor-html'
+    jQuery(document).ready(function($) {
+        let postsShown = 3;
+        const postsPerLoad = 3;
+        const posts = $('.post-item');
+        const totalPosts = posts.length;
+        
+        if (totalPosts <= 3) {
+            $('#loadMore').hide();
         }
+        
+        $('#loadMore').on('click', function() {
+            posts.slice(postsShown, postsShown + postsPerLoad).fadeIn('slow');
+            postsShown += postsPerLoad;
+            
+            if (postsShown >= totalPosts) {
+                $(this).fadeOut('slow');
+            }
+        });
     });
-}
-
-let contadorPosts = 3;
-const incremento = 3;
-
-document.getElementById('botonCargarMas').addEventListener('click', function() {
-    const postsOcultos = document.querySelectorAll('.publicacion-blog.d-none');
-    
-    for(let i = 0; i < incremento && i < postsOcultos.length; i++) {
-        postsOcultos[i].classList.remove('d-none');
-    }
-    
-    if (postsOcultos.length <= incremento) {
-        this.style.display = 'none';
-    }
-});
 </script>
-
-<style>
-.modal-ancho {
-    max-width: 800px !important;
-    max-height: 90vh !important;
-}
-
-.contenido-scrollable {
-    overflow-y: auto;
-    max-height: calc(80vh - 100px);
-    padding-right: 10px;
-}
-
-.contenedor-html {
-    margin: 0;
-    padding: 15px;
-}
-
-.contenido-modal {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-</style>

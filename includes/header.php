@@ -18,8 +18,8 @@
                 <a href="dashboard.php" class="btn btn-outline-light mr-2">Dashboard</a>
                 <a href="logout.php" class="btn btn-outline-light">Cerrar Sesión</a>
             <?php else: ?>
-                <a href="login.php" class="sign-in-btn">Admin Blog</a>
-                <a href="https://site4.q10.com/login?ReturnUrl=%2F&aplentId=73c46535-d1df-4c30-8340-44c2a135aae5" class="sign-in-btn">Login Q10</a>
+                <a href="login.php" class="sign-in-btn">Administrador Blog</a>
+                <a href="https://site4.q10.com/login?ReturnUrl=%2F&aplentId=73c46535-d1df-4c30-8340-44c2a135aae5" class="sign-in-btn">Plataforma Q10</a>
             <?php endif; ?>
         </div>
     </div>

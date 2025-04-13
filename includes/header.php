@@ -1,7 +1,7 @@
 <header class="header">
     <div class="text-img">
         <img src="/Cotemag/assets/img/logo5.png" class="logo" alt="logo-cotemag">
-        <h1>Cotemag</h1>
+        <h1 class="h1">Cotemag</h1>
     </div>
     <nav class="navbar">
         <ul>
@@ -12,8 +12,8 @@
             <li><a class="contant-a" title="Contacto" href="#">Contacto</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <div class="">
+    <div class="container-botones">
+        <div class="auth-buttons">
             <?php if (isset($_SESSION['user_id'])): ?>
                 <a href="dashboard.php" class="btn btn-outline-light mr-2">Dashboard</a>
                 <a href="logout.php" class="btn btn-outline-light">Cerrar Sesión</a>

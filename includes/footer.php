@@ -5,7 +5,6 @@
                 <img src="/Cotemag/assets/img/logo-icontec-1024x493.png" alt="Logo">
             </div>
             <p class="footer-description">Cotemag , ofrece Programas de Formación basados en Competencias Laborales.</p>
-           
         </div>
 
         <div class="footer-nav">

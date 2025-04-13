@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.novedad{
+    justify-content: center;
+}
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.titulo {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.imagenes {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 50px;
+}
+
+.imagenes div {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.imagenes div:hover {
+    transform: scale(1.05);
+}
+
+.imagenes img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.imagenes div:hover img {
+    transform: scale(1.1);
+}
+
+.imagen-expandida {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.imagen-expandida img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.cerrar, .pasar, .previa {
+    position: absolute;
+    top: 10px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.cerrar {
+    right: 20px;
+}
+
+.pasar {
+    right: 50px;
+}
+
+.previa {
+    left: 20px;
+}

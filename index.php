@@ -31,6 +31,8 @@ $resultado = mysqli_query($conexion, $query);
 
     <?php include '../cotemag/includes/about.php'; ?>
 
+    <?php include '../cotemag/nov.php'; ?>
+
     <?php include '../Cotemag/includes/oferta_academica.php'; ?>
 
     <?php include '../cotemag/includes/blog.php'; ?>

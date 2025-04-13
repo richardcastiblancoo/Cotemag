@@ -40,7 +40,7 @@
               <!-- Auxiliar de Enfermería -->
               <a href="#modal-nursing" class="program-card">
                 <div class="program-image">
-                  <img src="../assets/img/Enfermeria1.jpg" alt="Auxiliar de Enfermería">
+                  <img src="/cotemag/assets/img/Enfermeria1.jpg" alt="Auxiliar de Enfermería">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar de Enfermería</h3>
@@ -72,7 +72,7 @@
               <!-- Auxiliar en Salud Oral -->
               <a href="#modal-oral-health" class="program-card">
                 <div class="program-image">
-                  <img src="../assets/img/Salud_Oral_1080x1080.jpg" alt="Auxiliar en Salud Oral">
+                  <img src="/cotemag/assets/img/Salud_Oral_1080x1080.jpg" alt="Auxiliar en Salud Oral">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar en Salud Oral</h3>
@@ -104,7 +104,7 @@
               <!-- Auxiliar en Farmacia -->
               <a href="#modal-pharmacy" class="program-card">
                 <div class="program-image">
-                  <img src="../assets/img/Servicios_Farmaceuticos.jpg" alt="Auxiliar en Farmacia">
+                  <img src="/cotemag/assets/img/Servicios_Farmaceuticos.jpg" alt="Auxiliar en Farmacia">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar en Farmacia</h3>
@@ -136,7 +136,7 @@
               <!-- Auxiliar en Clínica Veterinaria -->
               <a href="#modal-veterinary" class="program-card">
                 <div class="program-image">
-                  <img src="../assets/img/Veterianaria.jpg" alt="Auxiliar en Clínica Veterinaria">
+                  <img src="/cotemag/assets/img/Veterianaria.jpg" alt="Auxiliar en Clínica Veterinaria">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar en Clínica Veterinaria</h3>
@@ -168,7 +168,7 @@
               <!-- Auxiliar en Salud y Seguridad en el Trabajo -->
               <a href="#modal-work-health" class="program-card">
                 <div class="program-image">
-                  <img src="../assets/img/SSGT.jpg" alt="Auxiliar en Salud y Seguridad en el Trabajo">
+                  <img src="/cotemag/assets/img/SSGT.jpg" alt="Auxiliar en Salud y Seguridad en el Trabajo">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar en Salud y Seguridad en el Trabajo</h3>
@@ -200,7 +200,7 @@
               <!-- Diplomado de Laboratorio Clínico -->
               <a href="#modal-laboratory" class="program-card">
                 <div class="program-image">
-                  <img src="../assets/img/Laboratorio_Clinico_1080x1080.jpg" alt="Diplomado de Laboratorio Clínico">
+                  <img src="/cotemag/assets/img/Laboratorio_Clinico_1080x1080.jpg" alt="Diplomado de Laboratorio Clínico">
                 </div>
                 <div class="program-header">
                   <h3>Diplomado de Laboratorio Clínico</h3>
@@ -232,7 +232,7 @@
               <!-- Masaje y Rehabilitación Terapéutica -->
               <a href="#modal-massage" class="program-card">
                 <div class="program-image">
-                  <img src="../assets/img/Masaje_y_Rehabilitacion_Terapeutica_1080x1080.jpg" alt="Masaje y Rehabilitación Terapéutica">
+                  <img src="/cotemag/assets/img/Masaje_y_Rehabilitacion_Terapeutica_1080x1080.jpg" alt="Masaje y Rehabilitación Terapéutica">
                 </div>
                 <div class="program-header">
                   <h3>Masaje y Rehabilitación Terapéutica</h3>
@@ -269,7 +269,7 @@
               <!-- Auxiliar Contable -->
               <a href="#modal-accounting" class="program-card">
                 <div class="program-image">
-                  <img src="../assets/img/Auxiliar_Contable.jpg" alt="Auxiliar Contable">
+                  <img src="/cotemag/assets/img/Auxiliar_Contable.jpg" alt="Auxiliar Contable">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar Contable</h3>
@@ -301,7 +301,7 @@
               <!-- Auxiliar de Mercadeo y Ventas -->
               <a href="#modal-marketing" class="program-card">
                 <div class="program-image">
-                  <img src="../assets/img/Mercadeo_y_Ventas.jpg" alt="Auxiliar de Mercadeo y Ventas">
+                  <img src="/cotemag/assets/img/Mercadeo_y_Ventas.jpg" alt="Auxiliar de Mercadeo y Ventas">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar de Mercadeo y Ventas</h3>
@@ -333,7 +333,7 @@
               <!-- Auxiliar en Agente de Aduanas -->
               <a href="#modal-customs" class="program-card">
                 <div class="program-image">
-                  <img src="../assets/img/Agete_de_Aduanas_1080x1080.jpg" alt="Auxiliar en Agente de Aduanas">
+                  <img src="/cotemag/assets/img/Agete_de_Aduanas_1080x1080.jpg" alt="Auxiliar en Agente de Aduanas">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar en Agente de Aduanas</h3>
@@ -365,7 +365,7 @@
               <!-- Auxiliar Administrativo -->
               <a href="#modal-administrative" class="program-card">
                 <div class="program-image">
-                  <img src="../assets/img/Administracion_empresarial.jpg" alt="Auxiliar Administrativo">
+                  <img src="/cotemag/assets/img/Administracion_empresarial.jpg" alt="Auxiliar Administrativo">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar Administrativo</h3>
@@ -397,7 +397,7 @@
               <!-- Auxiliar en Recepción Hotelera -->
               <a href="#modal-hotel" class="program-card">
                 <div class="program-image">
-                  <img src="../assets/img/Recepcion_Hotelera_1080x1080.jpg" alt="Auxiliar en Recepción Hotelera">
+                  <img src="/cotemag/assets/img/Recepcion_Hotelera_1080x1080.jpg" alt="Auxiliar en Recepción Hotelera">
                 </div>
                 <div class="program-header">
                   <h3>Auxiliar en Recepción Hotelera</h3>

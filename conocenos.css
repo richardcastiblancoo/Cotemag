@@ -1,12 +1,11 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-}
-
-body {
+  }
+  
+    .conocenos {
     background-color: black;
     color: white;
     min-height: 100vh;
@@ -14,110 +13,110 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 2rem 1rem;
-}
-
-h2 {
+  }
+  
+  h2 {
     color: #0066cc;
-}
-
-p {
+  }
+  
+  p {
     color: black;
-}
-
-h1 {
+  }
+  
+  h1 {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
     text-align: center;
-}
-
-.mission-statement {
+  }
+  
+  .ctmg-declaracion-mision {
     max-width: 800px;
     text-align: center;
     margin-bottom: 2.5rem;
-}
-
-.mission-text {
+  }
+  
+  .ctmg-texto-mision {
     color: white;
     line-height: 1.5;
     background-color: black;
-}
-
-.divider {
+  }
+  
+  .ctmg-divisor {
     border-top: 1px solid #f0c14b;
     width: 4rem;
     margin: 1.5rem auto;
-}
-
-.program-grid {
+  }
+  
+  .ctmg-cuadricula-programas {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     max-width: 1000px;
     width: 100%;
-}
-
-@media (min-width: 768px) {
-    .program-grid {
-        grid-template-columns: repeat(4, 1fr);
+  }
+  
+  @media (min-width: 768px) {
+    .ctmg-cuadricula-programas {
+      grid-template-columns: repeat(4, 1fr);
     }
-}
-
-.program-tile {
+  }
+  
+  .ctmg-tarjeta-programa {
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
     transition: transform 0.2s ease;
-}
-
-.program-tile:hover {
+  }
+  
+  .ctmg-tarjeta-programa:hover {
     transform: scale(1.05);
-}
-
-.tile-icon {
+  }
+  
+  .ctmg-icono-tarjeta {
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 2px;
-}
-
-.tile-icon i {
+  }
+  
+  .ctmg-icono-tarjeta i {
     font-size: 2.5rem;
     color: #0066cc;
-}
-
-.tile-title {
+  }
+  
+  .ctmg-titulo-tarjeta {
     text-align: center;
     font-size: 0.75rem;
     margin-top: 0.25rem;
     line-height: 1.2;
-}
-
-.bg-blue {
+  }
+  
+  .ctmg-fondo-azul {
     background-color: #3498db;
-}
-
-.bg-yellow {
+  }
+  
+  .ctmg-fondo-amarillo {
     background-color: #f1c40f;
-}
-
-.bg-pink {
+  }
+  
+  .ctmg-fondo-rosa {
     background-color: #f8a5c2;
-}
-
-.bg-purple {
+  }
+  
+  .ctmg-fondo-morado {
     background-color: #c8a2c8;
-}
-
-.bg-gray {
+  }
+  
+  .ctmg-fondo-gris {
     background-color: #95a5a6;
-}
-
-/* Modales - ESTILOS MEJORADOS */
-.modal {
+  }
+  
+  /* Modales - ESTILOS MEJORADOS */
+  .ctmg-modal {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -130,13 +129,13 @@ h1 {
     padding: 0;
     transition: opacity 0.3s ease;
     opacity: 0;
-}
-
-.modal.show {
+  }
+  
+  .ctmg-modal.ctmg-mostrar {
     opacity: 1;
-}
-
-.modal-content {
+  }
+  
+  .ctmg-contenido-modal {
     background-color: #fefefe;
     margin: 5vh auto;
     padding: 0;
@@ -150,27 +149,27 @@ h1 {
     max-height: 90vh;
     display: flex;
     flex-direction: column;
-}
-
-.modal.show .modal-content {
+  }
+  
+  .ctmg-modal.ctmg-mostrar .ctmg-contenido-modal {
     transform: translateY(0);
-}
-
-.modal-header {
+  }
+  
+  .ctmg-cabecera-modal {
     padding: 15px 20px;
     border-bottom: 1px solid #e0e0e0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #f8f9fa;
-}
-
-.modal-body {
+  }
+  
+  .ctmg-cuerpo-modal {
     padding: 20px;
     overflow-y: auto;
-}
-
-.close {
+  }
+  
+  .ctmg-cerrar {
     color: #666;
     float: right;
     font-size: 28px;
@@ -182,31 +181,32 @@ h1 {
     border: none;
     padding: 0;
     margin: 0;
-}
-
-.close:hover,
-.close:focus {
+  }
+  
+  .ctmg-cerrar:hover,
+  .ctmg-cerrar:focus {
     color: #000;
     text-decoration: none;
-}
-
-/* Estilos para el contenido del modal */
-.modal-content h2 {
+  }
+  
+  /* Estilos para el contenido del modal */
+  .ctmg-contenido-modal h2 {
     margin-top: 0;
     color: #0066cc;
     font-size: 1.5rem;
-}
-
-.modal-content p {
+  }
+  
+  .ctmg-contenido-modal p {
     color: #333;
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-    .modal-content {
-        width: 95%;
-        margin: 10vh auto;
+  }
+  
+  @media (max-width: 768px) {
+    .ctmg-contenido-modal {
+      width: 95%;
+      margin: 10vh auto;
     }
-}
+  }
+  

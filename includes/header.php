@@ -1,7 +1,7 @@
 <header class="header">
     <div class="text-img">
-        <img src="/Cotemag/assets/img/logo5.png" class="logo" alt="logo-cotemag">
-        <h1 class="h1">Cotemag</h1>
+        <img src="/Cotemag/assets/img/cotemag.png" class="logo" alt="logo-cotemag">
+        
     </div>
     <nav class="navbar">
         <ul>

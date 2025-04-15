@@ -330,11 +330,6 @@ $resultado = mysqli_query($conexion, $query);
                                             </div>
                                         </div>
                                         <p class="card-text"><?php echo substr($post['contenido'], 0, 200) . '...'; ?></p>
-                                        <h4 class="card-title text-primary"><?php echo $post['titulo']; ?></h4>
-                                        <p class="card-text text-muted mb-2">
-                                            <small><i class="fas fa-calendar-alt"></i> <?php echo date('d M Y', strtotime($post['fecha_publicacion'])); ?></small>
-                                        </p>
-                                        <p class="card-text"><?php echo substr($post['contenido'], 0, 200) . '...'; ?></p>
 
                                         <div class="d-flex justify-content-end mt-3">
                                             <button class="btn btn-outline-primary btn-sm mr-2" data-toggle="modal" data-target="#editModal<?php echo $post['id']; ?>">

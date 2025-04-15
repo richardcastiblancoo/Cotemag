@@ -17,3 +17,5 @@ CREATE TABLE noticias (
     fecha_publicacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (autor_id) REFERENCES usuarios(id)
 );
+
+ALTER TABLE usuarios ADD COLUMN imagen VARCHAR(255) DEFAULT NULL;

@@ -23,6 +23,9 @@ $resultado = mysqli_query($conexion, $query);
     <link rel="stylesheet" href="../Cotemag/assets/css/oferta_academica.css">
     <title>Cotemag - Bienvenidos a la Corporación Técnica del Magdalena</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="manifest" href="/cotemag/manifest.json">
+    <meta name="theme-color" content="#000000">
 </head>
 
 <body>
@@ -46,6 +49,20 @@ $resultado = mysqli_query($conexion, $query);
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
 </body>
 
 </html>

@@ -210,7 +210,10 @@ $resultado = mysqli_query($conexion, $query);
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <a href="/cotemag/dashboard-pqr.php">PQR</a>
+        <div class="d-flex align-items-center">
+            <img src="/Cotemag/assets/img/cotemag.png" width="100" alt="logo cotemag" class="mr-3">
+            <h1 class="text-white mb-0" style="font-size: 1.5rem;">Admin Cotemag</h1>
+        </div>
         <div class="container">
             <div class="navbar-nav ml-auto d-flex flex-row align-items-center">
                 <!-- Notification Bell -->
@@ -262,6 +265,8 @@ $resultado = mysqli_query($conexion, $query);
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                         <a class="dropdown-item" href="perfil.php">Mi Perfil</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/cotemag/dashboard-pqr.php">PQR</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="logout.php">Cerrar Sesión</a>
                     </div>

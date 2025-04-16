@@ -16,7 +16,7 @@ $resultado = mysqli_query($conexion, $query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link rel="icon" href="/Cotemag/assets/img/logo5.png" type="image/png">
+    <link rel="icon" href="/Cotemag/assets/img/cotemag.png" type="image/png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/cotemag/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -26,9 +26,49 @@ $resultado = mysqli_query($conexion, $query);
 
     <link rel="manifest" href="/cotemag/manifest.json">
     <meta name="theme-color" content="#000000">
+    <style>
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0a2463; /* Modern darker blue color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .preloader.fade-out {
+            opacity: 0;
+        }
+
+        .preloader img {
+            width: 150px;
+            height: 150px;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        body.loaded {
+            overflow: auto;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Add this right after body tag -->
+    <div class="preloader">
+        <img src="/Cotemag/assets/img/cotemag.png" alt="Cotemag Logo">
+    </div>
+
     <?php include '../cotemag/includes/header.php'; ?>
 
     <?php include '../cotemag/includes/about.php'; ?>
@@ -62,6 +102,20 @@ $resultado = mysqli_query($conexion, $query);
                     });
             });
         }
+    </script>
+    <!-- Add this before your existing scripts -->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const preloader = document.querySelector('.preloader');
+                preloader.classList.add('fade-out');
+                document.body.classList.add('loaded');
+                
+                setTimeout(function() {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 1500); // Shows preloader for 1.5 seconds
+        });
     </script>
 </body>
 

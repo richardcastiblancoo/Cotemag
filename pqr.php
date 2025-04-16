@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div class="container mt-5">
-        <img src="/cotemag/assets/img/cotemag.png" alt="Escudo Cotemag" class="header-logo">
+        <a href="/cotemag/index.php"><img src="/cotemag/assets/img/cotemag.png" alt="Escudo Cotemag" class="header-logo"></a>
         <h2 class="text-center mb-4 main-title">Formulario PQR</h2>
         
         <?php if (isset($mensaje)): ?>

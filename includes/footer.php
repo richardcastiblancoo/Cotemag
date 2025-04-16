@@ -22,7 +22,7 @@
             <div class="footer-column">
                 <h3>Soporte y Contáctanos</h3>
                 <ul>
-                    <li><a href="#">PQR</a></li>
+                    <li><a href="/cotemag/pqr.php">PQR</a></li>
                     <li><a href="/cotemag/pages/ConveniodePrácticas.php">Convenio de Prácticas</a></li>
                     <li><a href="https://wa.me/573004813444" target="_blank">(+57) 3004813444</a></li>
                     <li><a href="mailto:direcciongeneral@cotemag.edu.co">direcciongeneral@cotemag.edu.co</a></li>

@@ -2,20 +2,24 @@
 require_once 'config/db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Validate and sanitize inputs
-    $nombre = filter_input(INPUT_POST, 'nombre', FILTER_SANITIZE_STRING);
+    // Validate and sanitize inputs using modern methods
+    $nombre = htmlspecialchars(trim($_POST['nombre'] ?? ''));
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-    $documento = filter_input(INPUT_POST, 'documento', FILTER_SANITIZE_STRING);
-    $telefono = filter_input(INPUT_POST, 'telefono', FILTER_SANITIZE_STRING);
-    $tipoPQR = filter_input(INPUT_POST, 'tipoPQR', FILTER_SANITIZE_STRING);
-    $asunto = filter_input(INPUT_POST, 'asunto', FILTER_SANITIZE_STRING);
-    $descripcion = filter_input(INPUT_POST, 'descripcion', FILTER_SANITIZE_STRING);
+    $documento = htmlspecialchars(trim($_POST['documento'] ?? ''));
+    $telefono = htmlspecialchars(trim($_POST['telefono'] ?? ''));
+    $tipoPQR = htmlspecialchars(trim($_POST['tipoPQR'] ?? ''));
+    $asunto = htmlspecialchars(trim($_POST['asunto'] ?? ''));
+    $descripcion = htmlspecialchars(trim($_POST['descripcion'] ?? ''));
 
+    // Database connection
     try {
+        $pdo = new PDO("mysql:host=localhost;dbname=cotemag", "root", "");
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
         $sql = "INSERT INTO pqr_solicitudes (nombre, email, documento, telefono, tipo_pqr, asunto, descripcion) 
                 VALUES (:nombre, :email, :documento, :telefono, :tipoPQR, :asunto, :descripcion)";
         
-        $stmt = $conn->prepare($sql);
+        $stmt = $pdo->prepare($sql);
         $stmt->execute([
             ':nombre' => $nombre,
             ':email' => $email,
@@ -26,11 +30,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ':descripcion' => $descripcion
         ]);
 
-        // Redirect to dashboard after successful submission
-        header("Location: dashboard-pqr.php?success=1");
-        exit();
+        $mensaje = "PQR recibido exitosamente";
     } catch(PDOException $e) {
-        $mensaje = "Error: " . $e->getMessage();
+        $error = "Error al procesar la solicitud: " . $e->getMessage();
     }
 }
 ?>

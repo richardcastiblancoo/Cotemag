@@ -19,3 +19,16 @@ CREATE TABLE noticias (
 );
 
 ALTER TABLE usuarios ADD COLUMN imagen VARCHAR(255) DEFAULT NULL;
+
+
+CREATE TABLE IF NOT EXISTS pqr_solicitudes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    documento VARCHAR(50) NOT NULL,
+    telefono VARCHAR(20) NOT NULL,
+    tipo_pqr VARCHAR(50) NOT NULL,
+    asunto VARCHAR(255) NOT NULL,
+    descripcion TEXT NOT NULL,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

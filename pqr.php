@@ -1,4 +1,6 @@
 <?php
+require_once 'config/db.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate and sanitize inputs
     $nombre = filter_input(INPUT_POST, 'nombre', FILTER_SANITIZE_STRING);
@@ -9,9 +11,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $asunto = filter_input(INPUT_POST, 'asunto', FILTER_SANITIZE_STRING);
     $descripcion = filter_input(INPUT_POST, 'descripcion', FILTER_SANITIZE_STRING);
 
-    // Here you can add your database connection and insertion logic
-    // For now, we'll just show a success message
-    $mensaje = "PQR recibido exitosamente";
+    try {
+        $sql = "INSERT INTO pqr_solicitudes (nombre, email, documento, telefono, tipo_pqr, asunto, descripcion) 
+                VALUES (:nombre, :email, :documento, :telefono, :tipoPQR, :asunto, :descripcion)";
+        
+        $stmt = $conn->prepare($sql);
+        $stmt->execute([
+            ':nombre' => $nombre,
+            ':email' => $email,
+            ':documento' => $documento,
+            ':telefono' => $telefono,
+            ':tipoPQR' => $tipoPQR,
+            ':asunto' => $asunto,
+            ':descripcion' => $descripcion
+        ]);
+
+        // Redirect to dashboard after successful submission
+        header("Location: dashboard-pqr.php?success=1");
+        exit();
+    } catch(PDOException $e) {
+        $mensaje = "Error: " . $e->getMessage();
+    }
 }
 ?>
 

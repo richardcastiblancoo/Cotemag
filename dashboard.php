@@ -210,6 +210,7 @@ $resultado = mysqli_query($conexion, $query);
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a href="/cotemag/dashboard-pqr.php">PQR</a>
         <div class="container">
             <div class="navbar-nav ml-auto d-flex flex-row align-items-center">
                 <!-- Notification Bell -->

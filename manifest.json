@@ -3,8 +3,8 @@
   "short_name": "Cotemag",
   "start_url": "/index.php",
   "display": "standalone",
-  "background_color": "#0a2463",
-  "theme_color": "#000000",
+  "background_color": "#0B1D3A",
+  "theme_color": "#0B1D3A",
   "icons": [
     {
       "src": "/Cotemag/assets/img/cotemag.png",

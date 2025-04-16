@@ -39,7 +39,7 @@ $resultado = mysqli_query($conexion, $query);
     <title>Cotemag - Bienvenidos a la Corporación Técnica del Magdalena</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="manifest" href="/cotemag/manifest.json">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#0B1D3A">
     <style>
         .preloader {
             position: fixed;
@@ -47,7 +47,7 @@ $resultado = mysqli_query($conexion, $query);
             left: 0;
             width: 100%;
             height: 100%;
-            background: #0a2463;
+            background: #0B1D3A;
             /* Modern darker blue color */
             display: flex;
             justify-content: center;

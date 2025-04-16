@@ -118,7 +118,7 @@ ul, li {
     background-color: #045484;
     color: white;
     width: 150px;
-    border-radius: 25px;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -384,6 +384,7 @@ ul, li {
     color: #94a3b8;
     margin-bottom: 2rem;
     line-height: 1.5;
+    margin-top: 30px;
 }
 
 .social-links {

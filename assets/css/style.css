@@ -81,7 +81,7 @@ ul, li {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: #333;
+    color: white;
     font-weight: 700;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -130,8 +130,6 @@ ul, li {
     text-decoration: none;
     color: white;
 }
-
-/* ... existing styles ... */
 
 @media screen and (max-width: 1024px) {
     .header {
@@ -183,7 +181,7 @@ ul, li {
 
 /*about*/
 .main {
-    background-image: url(/cotemag/assets/img/portada-about.png);
+    background-image: url(/cotemag/assets/img/about-v1.png);
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -201,10 +199,11 @@ ul, li {
     font-size: 3.5em;
     font-weight: bold;
     margin-bottom: 20px;
+    color: white;
 }
 
 .gradient-text {
-    background: linear-gradient(to right, #ff6b2c, #ff9f2c);
+    background: linear-gradient(to right, var(--primary), var(--secondary));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -212,7 +211,7 @@ ul, li {
 }
 
 .description {
-    color: #102E50;
+    color: wheat;
     max-width: 600px;
     margin-bottom: 30px;
     line-height: 1.6;
@@ -326,8 +325,6 @@ ul, li {
     background: #3498db;
     border-radius: 3px;
 }
-
-/* ... existing card styles ... */
 
 #loadMore {
     padding: 12px 40px;

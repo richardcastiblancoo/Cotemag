@@ -4,7 +4,7 @@
 
 Este es un sistema web desarrollado en HTML, CSS, JAVASCRIPT, PHP, MYSQL, que permite a administradores, profesores y estudiantes gestionar calificaciones e información académica.
 
-![Vista previa del sistema](../Cotemag/assets/img/cotemag.png)
+![Descripción de la imagen](../cotemag/assets/img/cotemag.png)
 
 ## 🚀 Tecnologías Utilizadas
 - **html** (principal)

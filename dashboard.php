@@ -180,26 +180,26 @@ $resultado = mysqli_query($conexion, $query);
             padding: 0.25rem 0.5rem;
         }
 
-          /* Add these to your existing styles */
-          .dropdown-menu {
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        /* Add these to your existing styles */
+        .dropdown-menu {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         .badge {
             position: absolute;
             top: 0;
             right: 0;
             font-size: 0.7rem;
         }
-        
+
         .nav-item {
             position: relative;
         }
-        
+
         .media {
             transition: all 0.3s ease;
         }
-        
+
         .media:hover {
             background-color: #f8f9fa;
             padding: 8px;
@@ -258,15 +258,17 @@ $resultado = mysqli_query($conexion, $query);
                 ?>
                 <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown">
-                        <img src="<?php echo htmlspecialchars($profile_image); ?>" 
-                             alt="Profile" 
-                             class="rounded-circle"
-                             style="width: 32px; height: 32px; object-fit: cover;">
+                        <img src="<?php echo htmlspecialchars($profile_image); ?>"
+                            alt="Profile"
+                            class="rounded-circle"
+                            style="width: 32px; height: 32px; object-fit: cover;">
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                         <a class="dropdown-item" href="perfil.php">Mi Perfil</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/cotemag/dashboard-pqr.php">PQR</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/cotemag/registro.php">Agregar admin</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="logout.php">Cerrar Sesión</a>
                     </div>
@@ -279,27 +281,39 @@ $resultado = mysqli_query($conexion, $query);
     <div class="container mt-4">
         <div class="row">
             <div class="col-md-8">
-                <!-- Existing content (post creation and list) stays here -->
-                <div class="card">
-                    <div class="card-header bg-primary text-white">
-                        <h3 class="mb-0">Crear Nueva Publicación</h3>
-                    </div>
-                    <div class="card-body">
-                        <form method="POST" action="" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <label>Título</label>
-                                <input type="text" name="titulo" class="form-control" required>
+                <!-- Replace the existing card with a button -->
+                <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#createPostModal">
+                    <i class="fas fa-plus"></i> Crear Nueva Publicación
+                </button>
+
+                <!-- Add the modal for creating posts -->
+                <div class="modal fade" id="createPostModal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Crear Nueva Publicación</h5>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span>&times;</span>
+                                </button>
                             </div>
-                            <div class="form-group">
-                                <label>Contenido</label>
-                                <textarea name="contenido" class="form-control" rows="5" required></textarea>
+                            <div class="modal-body">
+                                <form method="POST" action="" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <label>Título</label>
+                                        <input type="text" name="titulo" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Contenido</label>
+                                        <textarea name="contenido" class="form-control" rows="5" required></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Imagen</label>
+                                        <input type="file" name="imagen" class="form-control-file">
+                                    </div>
+                                    <button type="submit" name="publicar" class="btn btn-primary">Publicar</button>
+                                </form>
                             </div>
-                            <div class="form-group">
-                                <label>Imagen</label>
-                                <input type="file" name="imagen" class="form-control-file">
-                            </div>
-                            <button type="submit" name="publicar" class="btn btn-primary">Publicar</button>
-                        </form>
+                        </div>
                     </div>
                 </div>
 
@@ -307,11 +321,18 @@ $resultado = mysqli_query($conexion, $query);
                     <div class="card-header bg-primary text-white">
                         <h3 class="mb-0">Mis Publicaciones</h3>
                     </div>
+                    <!-- Add search input -->
+                    <div class="card-body">
+                        <div class="form-group position-relative">
+                            <i class="fas fa-search position-absolute" style="top: 12px; right: 12px; color: #6c757d;"></i>
+                            <input type="text" id="searchPosts" class="form-control pr-4" placeholder="Buscar publicaciones...">
+                        </div>
+                    </div>
                     <div class="card-body p-0">
                         <div id="posts-container">
                             <?php while ($post = mysqli_fetch_assoc($resultado)): ?>
                                 <div class="card shadow-sm mb-3 mx-3 mt-3 post-item">
-                                    <?php 
+                                    <?php
                                     // Get author info
                                     $author_query = "SELECT username, imagen FROM usuarios WHERE id = {$post['autor_id']}";
                                     $author_result = mysqli_query($conexion, $author_query);
@@ -323,14 +344,14 @@ $resultado = mysqli_query($conexion, $query);
                                     <?php endif; ?>
                                     <div class="card-body">
                                         <div class="d-flex align-items-center mb-3">
-                                            <img src="<?php echo htmlspecialchars($author_image); ?>" 
-                                                 class="rounded-circle mr-2" 
-                                                 style="width: 40px; height: 40px; object-fit: cover;"
-                                                 alt="Author">
+                                            <img src="<?php echo htmlspecialchars($author_image); ?>"
+                                                class="rounded-circle mr-2"
+                                                style="width: 40px; height: 40px; object-fit: cover;"
+                                                alt="Author">
                                             <div>
                                                 <h4 class="card-title text-primary mb-0"><?php echo $post['titulo']; ?></h4>
                                                 <small class="text-muted">
-                                                    Por <?php echo htmlspecialchars($author['username']); ?> - 
+                                                    Por <?php echo htmlspecialchars($author['username']); ?> -
                                                     <?php echo date('d M Y', strtotime($post['fecha_publicacion'])); ?>
                                                 </small>
                                             </div>
@@ -411,14 +432,14 @@ $resultado = mysqli_query($conexion, $query);
                             $user_image = !empty($post['user_image']) ? $post['user_image'] : '/cotemag/assets/img/default-profile.png';
                         ?>
                             <div class="media mb-3">
-                                <img src="<?php echo htmlspecialchars($user_image); ?>" 
-                                     class="mr-3 rounded-circle" 
-                                     style="width: 40px; height: 40px; object-fit: cover;"
-                                     alt="User">
+                                <img src="<?php echo htmlspecialchars($user_image); ?>"
+                                    class="mr-3 rounded-circle"
+                                    style="width: 40px; height: 40px; object-fit: cover;"
+                                    alt="User">
                                 <div class="media-body">
                                     <h6 class="mt-0 mb-1"><?php echo htmlspecialchars($post['titulo']); ?></h6>
                                     <small class="text-muted">
-                                        Por <?php echo htmlspecialchars($post['username']); ?> - 
+                                        Por <?php echo htmlspecialchars($post['username']); ?> -
                                         <?php echo date('d M Y', strtotime($post['fecha_publicacion'])); ?>
                                     </small>
                                 </div>
@@ -435,6 +456,21 @@ $resultado = mysqli_query($conexion, $query);
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="/cotemag/scripts/main.js"></script>
+
+    <!-- Add search functionality -->
+    <script>
+        $(document).ready(function() {
+            $("#searchPosts").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#posts-container .post-item").filter(function() {
+                    $(this).toggle(
+                        $(this).text().toLowerCase().indexOf(value) > -1 ||
+                        $(this).find('.card-title').text().toLowerCase().indexOf(value) > -1
+                    );
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

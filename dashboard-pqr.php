@@ -4,6 +4,7 @@ require_once 'config/db.php';
 $sql = "SELECT * FROM pqr_solicitudes ORDER BY fecha_creacion DESC";
 $stmt = $conn->query($sql);
 $pqrs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$pqr_count = count($pqrs);
 ?>
 
 <!DOCTYPE html>
@@ -13,8 +14,57 @@ $pqrs = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard PQR</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+        .dropdown-item .text-truncate {
+            max-width: 250px;
+        }
+    </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand me-3" href="dashboard.php">
+                    <img src="assets/img/cotemag.png" alt="Logo Cotemag" height="100">
+                </a>
+                <h2 class="mb-0">Admin - PQR</h2>
+            </div>
+            <div class="ms-auto d-flex align-items-center">
+                <div class="position-relative me-4">
+                    <a href="#" class="text-dark text-decoration-none" id="notificationDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-bell fs-4"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            <?php echo $pqr_count; ?>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end p-2" style="width: 300px; max-height: 400px; overflow-y: auto;">
+                        <h6 class="dropdown-header">Solicitudes PQR Recientes</h6>
+                        <?php foreach (array_slice($pqrs, 0, 5) as $pqr): ?>
+                            <a class="dropdown-item py-2" href="#" onclick="viewDetails(<?php echo $pqr['id']; ?>); return false;">
+                                <div class="d-flex flex-column">
+                                    <small class="text-muted"><?php echo htmlspecialchars($pqr['fecha_creacion']); ?></small>
+                                    <strong><?php echo htmlspecialchars($pqr['tipo_pqr']); ?></strong>
+                                    <span class="text-truncate"><?php echo htmlspecialchars($pqr['asunto']); ?></span>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                        <?php endforeach; ?>
+                        <div class="text-center mt-2">
+                            <a href="#" class="btn btn-sm btn-primary w-100">Ver todas las solicitudes</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="dashboard.php" class="btn btn-success">
+                    Dashboard Principal
+                </a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container mt-5">
         <h2 class="text-center mb-4">Dashboard PQR</h2>
         

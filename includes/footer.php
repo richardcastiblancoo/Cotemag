@@ -66,6 +66,6 @@
     </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; <?php echo date('Y'); ?> Cotemag, Corporación Técnica del Magdalena todos los derechos de autor reservados.</p>
+        <p class="p-parrafo">&copy; <?php echo date('Y'); ?> Cotemag, Corporación Técnica del Magdalena todos los derechos de autor reservados.</p>
     </div>
 </footer>

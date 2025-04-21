@@ -7,7 +7,7 @@
         <ul>
             <li><a class="contant-a" title="Inicio" href="#">Inicio</a></li>
             <li><a class="contant-a" title="Novedades" href="#">Novedades</a></li>
-            <li><a class="contant-a" title="Conocenos" href="/cotemag/conocenos.php">Conocenos</a></li>
+            <li><a class="contant-a" title="Conocenos" href="#">Conocenos</a></li>
             <li><a class="contant-a" title="Programas" href="#">Programas</a></li>
             <li><a class="contant-a" title="Contacto" href="#">Contacto</a></li>
         </ul>

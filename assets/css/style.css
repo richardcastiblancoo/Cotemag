@@ -22,161 +22,121 @@
     box-sizing: border-box;
 }
 
-/* header */
 .header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 8%;
-    background-color: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.header.scrolled {
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.contant-a {
-    color: #fff;
-}
-
-.header.scrolled .contant-a {
-    color: #333;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #003366;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .text-img {
     display: flex;
     align-items: center;
-    gap: 15px;
 }
 
 .logo {
-    width: 100px;
-    height: auto;
+    height: 100px;
+    width: auto;
+    transition: transform 0.3s ease;
 }
 
-.h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #588ca4;
+.logo:hover {
+    transform: scale(1.05);
 }
 
-.navbar {
+.navbar ul {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 30px;
-}
-
-ul,
-li {
-    display: flex;
-    gap: 40px;
     list-style: none;
-    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
 }
 
 .contant-a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: #ffffff;
     text-decoration: none;
-    color: white;
-    font-weight: 700;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
     border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
 .contant-a:hover {
-    color: #045484;
-    background-color: rgba(107, 78, 155, 0.1);
-    width: 100px;
-    height: 30px;
-    text-decoration: none;
+    background-color: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
 }
 
 .container-botones {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 .auth-buttons {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    gap: 1rem;
+}
+
+.sign-in-btn, .btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 .sign-in-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 40px;
-    background-color: #045484;
-    color: white;
-    width: 150px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(107, 78, 155, 0.3);
+    background-color: #ffffff;
+    color: #1a237e;
 }
 
 .sign-in-btn:hover {
-    background-color: #bda44f;
-    text-decoration: none;
-    color: white;
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-@media screen and (max-width: 1024px) {
+.btn-outline-light {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #1a237e;
+    transform: translateY(-2px);
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
     .header {
-        padding: 1rem;
         flex-direction: column;
-    }
-
-    .text-img {
-        margin-bottom: 1rem;
-    }
-
-    .text-img img.logo {
-        max-width: 80px;
-    }
-
-    .text-img h1 {
-        font-size: 1.5rem;
+        padding: 1rem;
     }
 
     .navbar ul {
+        flex-direction: column;
+        align-items: center;
         gap: 1rem;
+        margin: 1rem 0;
     }
 
-    .navbar .contant-a {
-        font-size: 0.9rem;
-    }
-
-    .container {
+    .container-botones {
+        width: 100%;
+        justify-content: center;
         margin-top: 1rem;
     }
 
-    .sign-in-btn {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
-}
-
-/* For smaller laptops */
-@media screen and (max-width: 768px) {
-    .navbar ul {
+    .auth-buttons {
         flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .sign-in-btn, .btn {
+        width: 100%;
         text-align: center;
     }
 }

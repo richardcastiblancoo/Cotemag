@@ -27,7 +27,18 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #003366;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+/* Agregamos una clase para cuando se hace scroll */
+.header.scrolled {
+    background-color: rgba(0, 51, 102, 0.95); /* Color similar al original pero con transparencia */
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 

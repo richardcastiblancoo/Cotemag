@@ -37,7 +37,7 @@ $resultado = mysqli_query($conexion, $query);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../Cotemag/assets/css/oferta_academica.css">
     <title>Cotemag - Bienvenidos a la Corporación Técnica del Magdalena</title>
-    <link rel="stylesheet" href="../Cotemag/assets/css/nov.css">
+    <link rel="stylesheet" href="../Cotemag/nov.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="manifest" href="/cotemag/manifest.json">
     <meta name="theme-color" content="#0B1D3A">

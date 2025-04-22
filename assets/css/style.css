@@ -1,28 +1,100 @@
-:root {
-    --primary: #003366;
-    /* Azul marino del logo */
-    --primary-light: #004488;
-    /* Versión más clara para hover */
-    --secondary: #d4af37;
-    /* Dorado del logo */
-    --secondary-light: #e6c65c;
-    /* Dorado más claro para hover */
-    --text-primary: #333333;
-    --text-secondary: #666666;
-    --text-light: #888888;
-    --background: #f8f9fa;
-    --background-alt: #f0f7ff;
-    --border: #dddddd;
-    --overlay: rgba(0, 0, 0, 0.7);
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* header */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: transparent;
+    box-shadow: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
 
+/* Agregamos una clase para cuando se haga scroll */
+.encabezado.scrolled {
+    background: #0B1D3A;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.navegacion {
+    flex: 1;
+    margin: 0 2rem;
+}
+
+.navegacion ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.enlace-nav {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.enlace-nav:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.contenedor-botones {
+    display: flex;
+    align-items: center;
+}
+
+.botones-autenticacion {
+    display: flex;
+    gap: 1rem;
+}
+
+.boton-iniciar {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.boton-iniciar:hover {
+    background-color: white;
+    color: #1a2a6c;
+    transform: scale(1.05);
+}
 
 /* fin */
 
@@ -296,8 +368,6 @@ h1 {
         margin: 10vh auto;
     }
 }
-
-
 /*fin*/
 
 /* card */
@@ -414,8 +484,8 @@ h1 {
 
 /*fin*/
 
-/* footer */
 
+/* footer */
 .main-footer {
     background-color: #0B1D3A;
     color: #fff;
@@ -535,3 +605,4 @@ h1 {
         flex: 0 0 100%;
     }
 }
+/*fin*/

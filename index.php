@@ -108,6 +108,7 @@ $resultado = mysqli_query($conexion, $query);
     <!-- scripts -->
     <script src="/cotemag/scripts/main.js"></script>
     <script src="/cotemag/scripts/scroll.js"></script>
+    <script src="/cotemag/sw.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -115,7 +116,7 @@ $resultado = mysqli_query($conexion, $query);
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
+                navigator.serviceWorker.register('/cotemag/sw.js')
                     .then(registration => {
                         console.log('ServiceWorker registration successful');
                     })

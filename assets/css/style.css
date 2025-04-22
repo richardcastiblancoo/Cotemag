@@ -79,7 +79,7 @@ li {
     display: flex;
     gap: 20px;
     list-style: none;
-    /* flex-direction: column; */
+    flex-direction: column;
 }
 
 .contant-a {

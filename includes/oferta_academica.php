@@ -51,7 +51,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver mas</span>
                 </div>
               </a>
 
@@ -83,7 +83,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -115,7 +115,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -147,7 +147,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -179,7 +179,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -211,7 +211,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -243,7 +243,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
             </div>
@@ -280,7 +280,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -312,7 +312,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -344,7 +344,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -376,7 +376,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -408,7 +408,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -440,7 +440,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
             </div>
@@ -477,7 +477,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -509,7 +509,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -541,7 +541,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -573,7 +573,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -605,7 +605,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -638,7 +638,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
             </div>
@@ -675,7 +675,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -707,7 +707,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
             </div>
@@ -744,7 +744,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -776,7 +776,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -808,7 +808,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
             </div>
@@ -845,7 +845,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -877,7 +877,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -909,7 +909,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -941,7 +941,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
 
@@ -973,7 +973,7 @@
                   </div>
                 </div>
                 <div class="program-footer">
-                  <span class="btn btn-primary">Inscribirme</span>
+                  <span class="btn btn-primary">Ver más</span>
                 </div>
               </a>
             </div>
@@ -1008,7 +1008,7 @@
         </div>
 
         <div class="text-center">
-          <a href="inscripcion.html" class="btn btn-secondary btn-lg">Iniciar inscripción</a>
+          <a href="https://wa.me/573004813444" class="btn btn-secondary btn-lg">Iniciar inscripción</a>
         </div>
       </div>
     </section>
@@ -1130,7 +1130,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -1251,7 +1251,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -1372,7 +1372,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -1485,7 +1485,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -1598,7 +1598,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -1694,7 +1694,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -1790,7 +1790,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -1903,7 +1903,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -2017,7 +2017,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -2130,7 +2130,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -2244,7 +2244,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -2357,7 +2357,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -2471,7 +2471,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -2585,7 +2585,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -2680,7 +2680,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -2792,7 +2792,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -2906,7 +2906,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -3019,7 +3019,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -3140,7 +3140,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -3260,7 +3260,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -3372,7 +3372,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -3471,7 +3471,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -3584,7 +3584,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -3705,7 +3705,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -3826,7 +3826,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>
@@ -3930,7 +3930,7 @@
           </div>
 
           <div class="modal-footer">
-            <a href="inscripcion.html" class="btn btn-primary btn-lg">Inscribirme ahora</a>
+            <a href="https://wa.me/573004813444" class="btn btn-primary btn-lg">Inscribirme</a>
           </div>
         </div>
       </div>

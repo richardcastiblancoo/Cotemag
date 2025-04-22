@@ -37,6 +37,7 @@ $resultado = mysqli_query($conexion, $query);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../Cotemag/assets/css/oferta_academica.css">
     <title>Cotemag - Bienvenidos a la Corporación Técnica del Magdalena</title>
+    <link rel="stylesheet" href="../Cotemag/nov.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="manifest" href="/cotemag/manifest.json">
     <meta name="theme-color" content="#0B1D3A">
@@ -99,7 +100,7 @@ $resultado = mysqli_query($conexion, $query);
 
     <?php include '../cotemag/conocenos.php'; ?>
 
-    <?php include '../cotemag/nov.php'; ?>
+    <?php include '../Cotemag/includes/nov.php'; ?>
 
     <?php include '../cotemag/includes/blog.php'; ?>
 
@@ -108,6 +109,7 @@ $resultado = mysqli_query($conexion, $query);
     <!-- scripts -->
     <script src="/cotemag/scripts/main.js"></script>
     <script src="/cotemag/scripts/scroll.js"></script>
+    <script src="/cotemag/sw.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -115,7 +117,7 @@ $resultado = mysqli_query($conexion, $query);
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
+                navigator.serviceWorker.register('/cotemag/sw.js')
                     .then(registration => {
                         console.log('ServiceWorker registration successful');
                     })

@@ -88,6 +88,7 @@ $resultado = mysqli_query($conexion, $query);
 </head>
 
 <body>
+    <!-- body -->
     <div class="preloader">
         <img src="/Cotemag/assets/img/cotemag.png" alt="Cotemag Logo">
     </div>
@@ -105,42 +106,17 @@ $resultado = mysqli_query($conexion, $query);
     <?php include '../cotemag/includes/blog.php'; ?>
 
     <?php include '../cotemag/includes/footer.php'; ?>
-
+    <!-- fin -->
+     
     <!-- scripts -->
     <script src="/cotemag/scripts/main.js"></script>
-    <script src="/cotemag/scripts/scroll.js"></script>
-    <script src="/cotemag/sw.js"></script>
+    <script src="/cotemag/scripts/index.js"></script>
+    <script src="/cotemag/scripts/sw.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/cotemag/sw.js')
-                    .then(registration => {
-                        console.log('ServiceWorker registration successful');
-                    })
-                    .catch(err => {
-                        console.log('ServiceWorker registration failed: ', err);
-                    });
-            });
-        }
-    </script>
-    <!-- Add this before your existing scripts -->
-    <script>
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                const preloader = document.querySelector('.preloader');
-                preloader.classList.add('fade-out');
-                document.body.classList.add('loaded');
-
-                setTimeout(function() {
-                    preloader.style.display = 'none';
-                }, 500);
-            }, 1500); // Shows preloader for 1.5 seconds
-        });
-    </script>
+    <!-- fin -->
+   
 </body>
 
 </html>

@@ -1,10 +1,14 @@
--- Users table
+-- Users table with role
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,
     email VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    rol ENUM('rector', 'empleado') NOT NULL DEFAULT 'empleado',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    imagen VARCHAR(255) DEFAULT NULL,
+    UNIQUE INDEX unique_username (username),
+    UNIQUE INDEX unique_email (email)
 );
 
 -- News table
@@ -18,8 +22,9 @@ CREATE TABLE noticias (
     FOREIGN KEY (autor_id) REFERENCES usuarios(id)
 );
 
-ALTER TABLE usuarios ADD COLUMN imagen VARCHAR(255) DEFAULT NULL;
-
+-- Insertar usuario rector predeterminado
+INSERT INTO usuarios (username, email, password, rol) 
+VALUES ('admin', 'angello@cotemag.com', 'admin', 'rector');
 
 CREATE TABLE IF NOT EXISTS pqr_solicitudes (
     id INT AUTO_INCREMENT PRIMARY KEY,

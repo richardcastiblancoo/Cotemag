@@ -4,6 +4,25 @@
     box-sizing: border-box;
 }
 
+/* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #045484;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #033d61;
+}
+
+/* fin */
+
 /* header */
 .encabezado {
     display: flex;
@@ -94,10 +113,10 @@
     background-color: white;
     color: #1a2a6c;
     transform: scale(1.05);
+    text-decoration: none;
 }
 
 /* fin */
-
 
 
 /*about*/
@@ -108,57 +127,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-.hero-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 250px;
-}
-
-.title {
-    font-size: 3.5em;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: white;
-}
-
-.gradient-text {
-    background: linear-gradient(to right, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    display: inline;
-}
-
-.description {
-    color: wheat;
-    max-width: 600px;
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
-
-.search-container {
-    display: flex;
-    max-width: 500px;
-    margin-bottom: 40px;
-}
-
-.search-input {
-    flex: 1;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px 0 0 8px;
-    font-size: 1em;
-}
-
-.search-button {
-    padding: 15px 30px;
-    background-color: #045484;
-    color: white;
-    border: none;
-    border-radius: 0 8px 8px 0;
-    cursor: pointer;
 }
 
 /*fin*/

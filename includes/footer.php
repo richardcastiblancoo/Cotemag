@@ -55,13 +55,13 @@
             <div class="footer-column">
                 <h3>Redes Sociales</h3>
                 <ul>
-                    <li><a href="https://www.facebook.com/cotemagsm"><i class="fab fa-facebook"></i> Facebook</a></li>
-                    <li><a href="https://www.instagram.com/cotemagsm/"><i class="fab fa-instagram"></i> Instagram</a></li>
-                    <li><a href="https://x.com/cotemagsm"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://www.facebook.com/cotemagsm" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/cotemagsm/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://x.com/cotemagsm" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
                     <li><a href="https://wa.me/573004813444" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                    <li><a href="https://www.tiktok.com/@cotemag.sm" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></li>
                 </ul>
             </div>
-           
         </div>
     </div>
     </div>

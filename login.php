@@ -43,7 +43,6 @@ if (isset($_POST['login'])) {
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,10 +51,7 @@ if (isset($_POST['login'])) {
     <link rel="stylesheet" href="/Cotemag/assets/css/login.css">
     <link rel="icon" href="/Cotemag/assets/img/logo5.png" type="image/png">
 </head>
-
 <body>
-
-
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -105,5 +101,4 @@ if (isset($_POST['login'])) {
         </div>
     </div>
 </body>
-
 </html>

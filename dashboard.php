@@ -325,7 +325,7 @@ $resultado = mysqli_query($conexion, $query);
                     <div class="card-body">
                         <div class="form-group position-relative">
                             <i class="fas fa-search position-absolute" style="top: 12px; right: 12px; color: #6c757d;"></i>
-                            <input type="text" id="searchPosts" class="form-control pr-4" placeholder="Buscar publicaciones...">
+                            <input type="text" id="searchPosts" class="form-control pr-4" placeholder="Buscar por título...">
                         </div>
                     </div>
                     <div class="card-body p-0">
@@ -459,16 +459,22 @@ $resultado = mysqli_query($conexion, $query);
 
     <!-- Add search functionality -->
     <script>
-        $(document).ready(function() {
-            $("#searchPosts").on("keyup", function() {
-                var value = $(this).val().toLowerCase();
-                $("#posts-container .post-item").filter(function() {
-                    $(this).toggle(
-                        $(this).text().toLowerCase().indexOf(value) > -1 ||
-                        $(this).find('.card-title').text().toLowerCase().indexOf(value) > -1
-                    );
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchPosts');
+            const postsContainer = document.getElementById('posts-container');
+            const posts = postsContainer.getElementsByClassName('post-item');
+
+            function filterPosts() {
+                const searchTerm = searchInput.value.toLowerCase();
+
+                Array.from(posts).forEach(post => {
+                    const title = post.querySelector('.card-title').textContent.toLowerCase();
+                    const showPost = title.includes(searchTerm);
+                    post.style.display = showPost ? '' : 'none';
                 });
-            });
+            }
+
+            searchInput.addEventListener('input', filterPosts);
         });
     </script>
 </body>

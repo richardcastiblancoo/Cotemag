@@ -43,6 +43,7 @@ if (isset($_POST['login'])) {
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,6 +52,7 @@ if (isset($_POST['login'])) {
     <link rel="stylesheet" href="/Cotemag/assets/css/login.css">
     <link rel="icon" href="/Cotemag/assets/img/logo5.png" type="image/png">
 </head>
+
 <body>
     <div class="container mt-5">
         <div class="row justify-content-center">
@@ -75,13 +77,33 @@ if (isset($_POST['login'])) {
                         <form method="POST" action="">
                             <div class="form-group">
                                 <label>Usuario</label>
-                                <input type="text" name="username" class="form-control"
-                                    value="<?php echo isset($username) ? htmlspecialchars($username) : ''; ?>" required>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                <circle cx="12" cy="7" r="4"></circle>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <input type="text" name="username" class="form-control"
+                                        value="<?php echo isset($username) ? htmlspecialchars($username) : ''; ?>" required>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label>Contraseña</label>
-                                <input type="password" name="password" class="form-control"
-                                    value="<?php echo isset($password) ? htmlspecialchars($password) : ''; ?>" required>
+                                <div class="input-group">
+                                    <input type="password" name="password" id="password" class="form-control"
+                                        value="<?php echo isset($password) ? htmlspecialchars($password) : ''; ?>" required>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                <circle cx="12" cy="12" r="3"></circle>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <div class="custom-control custom-checkbox">
@@ -100,5 +122,14 @@ if (isset($_POST['login'])) {
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+        });
+    </script>
 </body>
+
 </html>

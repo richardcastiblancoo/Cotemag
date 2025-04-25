@@ -19,11 +19,39 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($post['titulo']); ?> - Cotemag</title>
-    <link rel="icon" href="/Cotemag/assets/img/logo5.png" type="image/png">
+    <link rel="icon" href="/Cotemag/assets/img/cotemag.png" type="image/png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+        .navbar {
+            background-color: #1a237e !important;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .navbar-brand img {
+            transition: transform 0.3s ease;
+        }
+        
+        .navbar-brand:hover img {
+            transform: scale(1.1);
+        }
+        
+        .btn-outline-light:hover {
+            background-color: #ffffff;
+            color: #1a237e;
+        }
         .post-image {
-            width: 100%;
+            width: 50%;
+            height: auto;
+            margin: auto;
             object-fit: cover;
         }
         .post-content {
@@ -38,11 +66,10 @@ if (isset($_GET['id'])) {
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.php">
-                <img src="/cotemag/assets/img/logo5.png" alt="Cotemag Logo" style="height: 40px;">
-                Cotemag
+                <img src="/Cotemag/assets/img/cotemag.png" alt="Cotemag Logo" style="height: 100px;">
             </a>
             <a href="index.php" class="btn btn-outline-light">Volver al Blog</a>
         </div>

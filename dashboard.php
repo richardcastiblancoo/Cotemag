@@ -71,12 +71,28 @@ $resultado = mysqli_query($conexion, $query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Cotemag</title>
-    <link rel="icon" href="/Cotemag/assets/img/logo5.png" type="image/png">
+    <title>Cotemag - Dashboard</title>
+    <link rel="icon" href="/Cotemag/assets/img/cotemag.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/cotemag/assets/css/dashboard.css">
     <style>
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #045484;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #033d61;
+        }
+
         .navbar-brand img {
             height: 40px;
             margin-right: 10px;
@@ -84,7 +100,57 @@ $resultado = mysqli_query($conexion, $query);
 
         .navbar {
             padding: 0.5rem 1rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar-dark {
+            background-color: #1a237e;
+        }
+
+        .navbar .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .navbar .nav-link:hover {
+            color: #ffffff !important;
+        }
+
+        .navbar .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ffffff;
+            transition: width 0.3s ease;
+        }
+
+        .navbar .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .navbar .dropdown-menu {
+            background-color: #283593;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar .dropdown-item {
+            color: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+        }
+
+        .navbar .dropdown-item:hover {
+            background-color: #1a237e;
+            color: #ffffff;
         }
 
         .card {
@@ -209,10 +275,10 @@ $resultado = mysqli_query($conexion, $query);
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="d-flex align-items-center">
             <img src="/Cotemag/assets/img/cotemag.png" width="100" alt="logo cotemag" class="mr-3">
-            <h1 class="text-white mb-0" style="font-size: 1.5rem;">Admin Cotemag</h1>
+            <h1 class="text-white mb-0" style="font-size: 1.5rem;">Admin </h1>
         </div>
         <div class="container">
             <div class="navbar-nav ml-auto d-flex flex-row align-items-center">

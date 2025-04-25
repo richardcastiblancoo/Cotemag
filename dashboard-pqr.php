@@ -9,23 +9,124 @@ $pqr_count = count($pqrs);
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard PQR</title>
+    <link rel="shortcut icon" href="/Cotemag/assets/img/cotemag.png" type="image/x-icon">
+    <title>Cotemag - PQR</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #045484;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #033d61;
+        }
+
         .dropdown-item:hover {
             background-color: #f8f9fa;
         }
+
         .dropdown-item .text-truncate {
             max-width: 250px;
         }
+
+        .navbar {
+            background-color: #1a237e !important;
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            padding: 0;
+        }
+
+        .navbar h2 {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .navbar h2 {
+                font-size: 1.2rem;
+            }
+
+            .navbar-brand img {
+                height: 70px;
+            }
+
+            .navbar .container {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .navbar .ms-auto {
+                margin-top: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar h2 {
+                font-size: 1rem;
+            }
+
+            .navbar-brand img {
+                height: 50px;
+            }
+
+            .navbar .btn-success {
+                font-size: 0.875rem;
+                padding: 0.375rem 0.75rem;
+            }
+        }
+
+        .navbar .text-dark {
+            color: white !important;
+        }
+
+        .navbar .badge {
+            background-color: #ff4444;
+        }
+
+        .navbar .btn-success {
+            background-color: wheat;
+            border: none;
+            color: black;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .navbar .btn-success:hover {
+            background-color: whitesmoke;
+            transform: translateY(-2px);
+        }
+
+        .navbar-light .navbar-brand img {
+            filter: brightness(0) invert(1);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
     </style>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow">
         <div class="container">
             <div class="d-flex align-items-center">
                 <a class="navbar-brand me-3" href="dashboard.php">
@@ -67,7 +168,7 @@ $pqr_count = count($pqrs);
 
     <div class="container mt-5">
         <h2 class="text-center mb-4">Dashboard PQR</h2>
-        
+
         <?php if (isset($_GET['success'])): ?>
             <div class="alert alert-success" role="alert">
                 Nueva solicitud PQR registrada exitosamente.
@@ -88,16 +189,16 @@ $pqr_count = count($pqrs);
                 </thead>
                 <tbody>
                     <?php foreach ($pqrs as $pqr): ?>
-                    <tr>
-                        <td><?php echo htmlspecialchars($pqr['id']); ?></td>
-                        <td><?php echo htmlspecialchars($pqr['nombre']); ?></td>
-                        <td><?php echo htmlspecialchars($pqr['tipo_pqr']); ?></td>
-                        <td><?php echo htmlspecialchars($pqr['asunto']); ?></td>
-                        <td><?php echo htmlspecialchars($pqr['fecha_creacion']); ?></td>
-                        <td>
-                            <button class="btn btn-sm btn-primary" onclick="viewDetails(<?php echo $pqr['id']; ?>)">Ver Detalles</button>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td><?php echo htmlspecialchars($pqr['id']); ?></td>
+                            <td><?php echo htmlspecialchars($pqr['nombre']); ?></td>
+                            <td><?php echo htmlspecialchars($pqr['tipo_pqr']); ?></td>
+                            <td><?php echo htmlspecialchars($pqr['asunto']); ?></td>
+                            <td><?php echo htmlspecialchars($pqr['fecha_creacion']); ?></td>
+                            <td>
+                                <button class="btn btn-sm btn-primary" onclick="viewDetails(<?php echo $pqr['id']; ?>)">Ver Detalles</button>
+                            </td>
+                        </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
@@ -171,4 +272,5 @@ $pqr_count = count($pqrs);
         }
     </script>
 </body>
+
 </html>

@@ -87,18 +87,49 @@ $user = mysqli_fetch_assoc($result);
             border-radius: 50%;
             border: 3px solid #007bff;
         }
+        
         .card {
             border: none;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
+
+        /* Estilos mejorados para el navbar */
+        .navbar {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-brand img {
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand img:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-outline-light {
+            border-width: 2px;
+            padding: 0.5rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-light:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-light i {
+            margin-right: 8px;
+        }
     </style>
 </head>
 <body class="bg-light">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="dashboard.php">
-                <img src="/cotemag/assets/img/logo5.png" alt="Cotemag" height="40">
+                <img src="/Cotemag/assets/img/cotemag.png" alt="Cotemag" height="100">
             </a>
             <a href="dashboard.php" class="btn btn-outline-light">
                 <i class="fas fa-arrow-left"></i> Volver al Dashboard

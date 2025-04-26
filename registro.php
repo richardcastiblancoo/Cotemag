@@ -24,7 +24,7 @@ if(isset($_POST['register'])) {
     <title>Registro - Cotemag</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Cotemag/assets/css/login.css">
-    <link rel="icon" href="/Cotemag/assets/img/logo5.png" type="image/png">
+    <link rel="icon" href="/Cotemag/assets/img/cotemag.png" type="image/png">
 </head>
 <body>
     <div class="container mt-5">
@@ -35,7 +35,7 @@ if(isset($_POST['register'])) {
                         <h3 class="text-center">Registro</h3>
                     </div>
                     <div class="text-center mt-4 mb-3">
-                        <img src="/Cotemag/assets/img/logo5.png" alt="Cotemag Logo" class="login-logo">
+                        <img src="/Cotemag/assets/img/cotemag.png" alt="Cotemag Logo" class="login-logo">
                     </div>
                     <div class="card-body">
                         <?php if(isset($error)): ?>

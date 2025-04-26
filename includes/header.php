@@ -22,4 +22,7 @@
             <?php endif; ?>
         </div>
     </div>
+    <div class="menuhamburguesa">
+        <?php include '../cotemag/includes/menuhamburguesa.php'; ?>
+    </div>
 </header>

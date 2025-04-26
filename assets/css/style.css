@@ -48,6 +48,10 @@
     align-items: center;
 }
 
+.menuhamburguesa{
+    display: none;
+}
+
 .logo {
     width: 150px;
     height: auto;
@@ -554,6 +558,18 @@ h1 {
 }
 
 @media (max-width: 768px) {
+    .enlace-nav{
+        display: none;
+    }
+
+    .contenedor-botones{
+        display: none;
+    }
+
+    .menuhamburguesa{
+        display: flex;
+    }
+
     .footer-content {
         flex-direction: column;
     }
